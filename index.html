@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0b122d" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <title>Sashkin Apps — офіційна сторінка розробника</title>
+    <meta name="description" content="Офіційний сайт Sashkin Apps: ігри та інструменти для Android. Quizary, Quotes+ та інші. Завантажуйте з Google Play." />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>📱</text></svg>">
+    <style>
+      /* ====== RESET (mobile-first) ====== */
+      *,*::before,*::after{box-sizing:border-box}
+      html,body{margin:0;padding:0}
+      img{max-width:100%;display:block}
+      button{font:inherit}
+
+      /* ====== THEME TOKENS ====== */
+      :root{
+        --bg: #f7f8fc;        /* light */
+        --bg-accent:#ffffff;
+        --text:#0e1327;
+        --muted:#556080b3;
+        --line:#e5e8f5;
+        --surface:#ffffff;
+        --brand:#1b4bff;      
+        --brand-2:#8aa4ff;
+        --shadow: 0 10px 30px rgba(24,39,75,.08);
+        --radius: 16px;
+      }
+      @media (prefers-color-scheme: dark){
+        :root{
+          --bg: #0a0f22;      /* dark */
+          --bg-accent: radial-gradient(900px 600px at 10% -10%, #101a3a 0%, transparent 60%),
+                        radial-gradient(900px 600px at 120% 120%, #0f1c44 0%, transparent 60%), #0a0f22;
+          --text:#e9eeff;
+          --muted:#b9c6ff99;
+          --line:#2b3561;
+          --surface: linear-gradient(180deg,#121a33 0%, #0f1430 100%);
+          --shadow: 0 20px 50px rgba(0,0,0,.35);
+        }
+      }
+      [data-theme="light"]{
+        --bg:#f7f8fc; --bg-accent:#ffffff; --text:#0e1327; --muted:#556080b3; --line:#e5e8f5; --surface:#ffffff; --shadow:0 10px 30px rgba(24,39,75,.08);
+      }
+      [data-theme="dark"]{
+        --bg:#0a0f22; --bg-accent:radial-gradient(900px 600px at 10% -10%, #101a3a 0%, transparent 60%), radial-gradient(900px 600px at 120% 120%, #0f1c44 0%, transparent 60%), #0a0f22; --text:#e9eeff; --muted:#b9c6ff99; --line:#2b3561; --surface:linear-gradient(180deg,#121a33 0%, #0f1430 100%); --shadow:0 20px 50px rgba(0,0,0,.35);
+      }
+
+      body{font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial; color:var(--text); background:var(--bg-accent); min-height:100dvh;}
+      .container{max-width:1100px;margin:0 auto;padding:16px clamp(16px,3.5vw,28px)}
+
+      /* ====== HEADER ====== */
+      header{position:sticky;top:0;z-index:10;background:color-mix(in oklab, var(--bg) 60%, transparent);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--line)}
+      .topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0}
+      .brand{display:flex;align-items:center;gap:10px}
+      .logo{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg, color-mix(in oklab, var(--brand) 20%, transparent), transparent), var(--surface);border:1px solid var(--line);display:grid;place-items:center;font-weight:800;color:var(--brand)}
+      .controls{display:flex;gap:8px}
+      .chip{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);padding:6px 10px;border-radius:999px;background:color-mix(in oklab, var(--bg) 90%, transparent)}
+      .chip button{border:0;background:transparent;padding:6px 8px;border-radius:8px;cursor:pointer;font-weight:700;color:var(--muted)}
+      .chip button.active{color:var(--text); background:color-mix(in oklab, var(--bg) 70%, transparent)}
+      .tbtn{border:1px solid var(--line);background:color-mix(in oklab, var(--bg) 85%, transparent);padding:8px 10px;border-radius:12px;cursor:pointer}
+
+      /* ====== HERO ====== */
+      .hero{margin:18px 0 22px;padding:18px clamp(14px,3vw,22px);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);background:var(--surface)}
+      .hero h1{margin:0 0 6px;font-size:clamp(24px, 5.5vw, 40px);letter-spacing:.2px}
+      .hero p{margin:8px 0 0;color:var(--muted);font-size:clamp(14px, 3.5vw, 16px)}
+
+      /* ====== GRID ====== */
+      .row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px}
+      .grid{display:grid;grid-template-columns:repeat( auto-fit, minmax(240px,1fr) );gap:14px;margin-top:14px}
+      .card{display:flex;flex-direction:column;gap:12px;border:1px solid var(--line);border-radius:18px;padding:14px;min-height:220px;background:var(--surface);box-shadow:var(--shadow)}
+      .app-head{display:flex;gap:12px;align-items:center}
+      .icon{width:64px;height:64px;border-radius:14px;border:1px solid var(--line);object-fit:cover;background:color-mix(in oklab, var(--bg) 85%, transparent)}
+      .title{font-size:18px;margin:0}
+      .badge{font-size:12px;color:var(--muted);border:1px solid var(--line);padding:2px 8px;border-radius:999px}
+      .desc{color:color-mix(in oklab, var(--text) 80%, transparent);line-height:1.6;margin:0}
+      .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto}
+      .btn{--b:var(--brand);text-decoration:none;display:inline-flex;align-items:center;gap:8px;border:1px solid color-mix(in oklab, var(--b) 35%, var(--line));padding:12px 14px;border-radius:12px;font-weight:700}
+      .btn:hover{border-color:var(--brand)}
+
+      /* ====== FOOTER ====== */
+      footer{margin:22px 0 10px;padding:12px 14px;border:1px solid var(--line);border-radius:14px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;background:color-mix(in oklab,var(--bg) 80%, transparent)}
+
+      /* ====== ACCESSIBILITY ====== */
+      @media (prefers-reduced-motion: reduce){ *{scroll-behavior:auto} }
+      :focus-visible{outline:2px solid var(--brand);outline-offset:2px;border-radius:8px}
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container topbar">
+        <div class="brand">
+          <div class="logo" aria-hidden="true">SA</div>
+          <div>
+            <div style="font-weight:800">Sashkin Apps</div>
+            <div class="muted" data-i18n="tagline">Офіційна сторінка розробника</div>
+          </div>
+        </div>
+        <div class="controls">
+          <div class="chip" role="tablist" aria-label="Language switcher">
+            <button id="btn-uk" class="active" data-lang="uk" role="tab" aria-selected="true">UA</button>
+            <button id="btn-ru" data-lang="ru" role="tab" aria-selected="false">RU</button>
+            <button id="btn-en" data-lang="en" role="tab" aria-selected="false">EN</button>
+          </div>
+          <button id="themeToggle" class="tbtn" aria-label="Toggle theme">🌗</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h1 data-i18n="heroTitle">Мобільні додатки від Sashkin Apps</h1>
+        <p data-i18n="heroSubtitle">Ігри та інструменти для Android. Красиві, швидкі та з повагою до приватності.</p>
+      </section>
+
+      <section>
+        <div class="row">
+          <h2 style="margin:0" data-i18n="apps">Додатки</h2>
+        </div>
+        <div class="grid" id="apps"></div>
+      </section>
+
+      <footer>
+        <span>© <span id="y"></span> Sashkin Apps</span>
+        <span><span data-i18n="contact">Зв'язок:</span> <a href="mailto:sashkinapps@gmail.com">sashkinapps@gmail.com</a></span>
+      </footer>
+    </main>
+
+    <script>
+      // ====== i18n (UK, RU, EN) ======
+      const i18n = {
+        uk: {
+          tagline: 'Офіційна сторінка розробника',
+          heroTitle: 'Мобільні додатки від Sashkin Apps',
+          heroSubtitle: 'Ігри та інструменти для Android. Красиві, швидкі та з повагою до приватності.',
+          apps: 'Додатки',
+          gp: 'Відкрити в Google Play',
+        },
+        ru: {
+          tagline: 'Официальная страница разработчика',
+          heroTitle: 'Мобильные приложения от Sashkin Apps',
+          heroSubtitle: 'Игры и инструменты для Android. Красивые, быстрые и с уважением к приватности.',
+          apps: 'Приложения',
+          gp: 'Открыть в Google Play',
+        },
+        en: {
+          tagline: 'Official developer page',
+          heroTitle: 'Mobile apps by Sashkin Apps',
+          heroSubtitle: 'Games and tools for Android. Fast, beautiful, and privacy‑respecting.',
+          apps: 'Apps',
+          gp: 'Open in Google Play',
+        }
+      };
+
+      // ====== Data (fill icons when ready) ======
+      const apps = [
+        {
+          id: 'com.sbro.quizary',
+          title: { uk: 'Quizary — Вікторина та Навчання', ru: 'Quizary — Викторина и Обучение', en: 'Quizary — Quiz & Learn' },
+          desc: {
+            uk: 'Тренуй пам\'ять і ерудицію: швидкі раунди, сотні запитань, режим навчання, досягнення та таблиця лідерів.',
+            ru: 'Тренируй память и эрудицию: быстрые раунды, сотни вопросов, режим обучения, достижения и таблица лидеров.',
+            en: 'Train memory and knowledge: quick rounds, hundreds of questions, Learning mode, achievements & leaderboards.'
+          },
+          icon: 'https://play-lh.googleusercontent.com/placeholder=w240-h240',
+          link: 'https://play.google.com/store/apps/details?id=com.sbro.quizary'
+        },
+        {
+          id: 'com.sbro.qomoti',
+          title: { uk: 'Quotes+ — Щоденне Натхнення', ru: 'Quotes+ — Ежедневное Вдохновение', en: 'Quotes+ — Daily Inspiration' },
+          desc: {
+            uk: '2800+ цитат за категоріями, обрані, історія, віджети та шаринг. Створюй власні картки цитат.',
+            ru: '2800+ цитат по категориям, избранное, история, виджеты и шаринг. Создавай собственные карточки цитат.',
+            en: '2800+ quotes by categories, favorites, history, widgets & sharing. Create your own quote cards.'
+          },
+          icon: 'https://play-lh.googleusercontent.com/placeholder2=w240-h240',
+          link: 'https://play.google.com/store/apps/details?id=com.sbro.qomoti'
+        }
+      ];
+
+      // ====== Render ======
+      const grid = document.getElementById('apps');
+      function render(lang){
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const key = el.getAttribute('data-i18n');
+          el.textContent = i18n[lang][key];
+        });
+        grid.innerHTML = '';
+        apps.forEach(app => {
+          const card = document.createElement('article');
+          card.className = 'card';
+          card.innerHTML = `
+            <div class="app-head">
+              <img class="icon" alt="${app.title[lang]}" src="${app.icon}" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 120 120\'%3E%3Crect width=\'100%25\' height=\'100%25\' rx=\'24\' fill=\'%23e9ecff\'/%3E%3Ctext x=\'50%25\' y=\'54%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-size=\'44\' fill=\'%231b4bff\' font-family=\'Inter,Arial\'\'>📱%3C/text%3E%3C/svg%3E'"/>
+              <div>
+                <h3 class="title">${app.title[lang]}</h3>
+                <span class="badge">Android</span>
+              </div>
+            </div>
+            <p class="desc">${app.desc[lang]}</p>
+            <div class="actions">
+              <a class="btn" href="${app.link}" target="_blank" rel="noopener">${i18n[lang].gp}
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.3 1.7 14 12 3.3 22.3c-.8.8-2.3.2-2.3-1V2.7c0-1.2 1.5-1.8 2.3-1Z"/><path d="M15.6 13.6 4.2 22.7c.7.7 1.8.8 2.6.3l13-7.6c.9-.6.9-2 0-2.6l-13-7.6c-.8-.5-1.9-.4-2.6.3l11.4 9Z" opacity=".7"/></svg>
+              </a>
+            </div>`;
+          grid.appendChild(card);
+        });
+      }
+
+      // ====== Language ======
+      const btnUk = document.getElementById('btn-uk');
+      const btnRu = document.getElementById('btn-ru');
+      const btnEn = document.getElementById('btn-en');
+      function setLang(lang){
+        document.documentElement.lang = lang;
+        [btnUk, btnRu, btnEn].forEach(b=>b.classList.toggle('active', b.dataset.lang===lang));
+        render(lang);
+        localStorage.setItem('lang', lang);
+      }
+
+      // ====== Theme (system + manual toggle) ======
+      const themeBtn = document.getElementById('themeToggle');
+      function applyTheme(mode){
+        document.documentElement.setAttribute('data-theme', mode);
+        localStorage.setItem('theme', mode);
+      }
+      function initTheme(){
+        const stored = localStorage.getItem('theme');
+        if(stored){ applyTheme(stored); return; }
+        // use system preference first load
+        const sysDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        applyTheme(sysDark ? 'dark' : 'light');
+      }
+
+      // ====== Init ======
+      document.getElementById('y').textContent = new Date().getFullYear();
+      initTheme();
+      const storedLang = localStorage.getItem('lang') || 'uk';
+      setLang(storedLang);
+
+      btnUk.onclick = () => setLang('uk');
+      btnRu.onclick = () => setLang('ru');
+      btnEn.onclick = () => setLang('en');
+      themeBtn.onclick = () => {
+        const cur = document.documentElement.getAttribute('data-theme');
+        applyTheme(cur === 'dark' ? 'light' : 'dark');
+      };
+    </script>
+  </body>
+</html>
