@@ -112,7 +112,7 @@
         en:{tagline:'Official developer page',heroTitle:'Mobile apps by Sashkin Apps',heroSubtitle:'Games and tools for Android. Fast, beautiful, and privacy-respecting.',apps:'Apps',gp:'Open in Google Play'}
       };
 
-      // SVG fallback generator (nice gradient with initials)
+      // SVG fallback (на випадок, якщо PNG відсутній)
       const svgFallback = (txt) =>
         `data:image/svg+xml,` +
         encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'>
@@ -124,7 +124,7 @@
                 font-size='44' fill='#1b4bff' font-family='Inter,Arial,system-ui'>${txt}</text>
         </svg>`);
 
-      // Apps data with LOCAL icons
+      // ЛОКАЛЬНІ іконки
       const apps = [
         {
           id:'com.sbro.quizary',
