@@ -32,17 +32,25 @@
       body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial;color:var(--text);background:var(--bg-accent);min-height:100dvh}
       .container{max-width:1100px;margin:0 auto;padding:16px clamp(16px,3.5vw,28px)}
 
-      header{position:sticky;top:0;z-index:10;background:color-mix(in oklab, var(--bg) 60%, transparent);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--line)}
+      /* Хедер з «хитким склом» */
+      header{position:sticky;top:0;z-index:10;border-bottom:1px solid var(--line)}
+      header .glass{
+        background: color-mix(in oklab, var(--bg) 35%, transparent);
+        backdrop-filter: blur(14px) saturate(140%);
+        -webkit-backdrop-filter: blur(14px) saturate(140%);
+      }
       .topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0}
-      .brand{display:flex;align-items:center;gap:10px}
+      .brand{display:flex;align-items:center;gap:12px}
 
-      /* ОНОВЛЕНО: .logo тепер — зображення */
+      /* збільшене лого */
       .logo{
-        width:36px;
-        height:36px;
-        border-radius:10px;
-        border:1px solid var(--line);
-        object-fit:cover;
+        width: clamp(40px, 5vw, 56px);
+        height: clamp(40px, 5vw, 56px);
+        aspect-ratio: 1/1;
+        border-radius: 12px;
+        border:1px solid color-mix(in oklab, var(--line) 80%, transparent);
+        object-fit: cover;
+        box-shadow: 0 1px 0 rgba(255,255,255,.6) inset;
       }
 
       .controls{display:flex;gap:8px}
@@ -51,15 +59,43 @@
       .chip button.active{color:var(--text);background:color-mix(in oklab, var(--bg) 70%, transparent)}
       .tbtn{border:1px solid var(--line);background:color-mix(in oklab, var(--bg) 85%, transparent);padding:8px 10px;border-radius:12px;cursor:pointer}
 
-      .hero{margin:18px 0 22px;padding:18px clamp(14px,3vw,22px);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);background:var(--surface)}
+      /* Банер із синьою картинкою */
+      .brand-banner{
+        margin:14px 0 22px;
+        border:1px solid var(--line);
+        border-radius: var(--radius);
+        min-height: 220px;
+        background:
+          center/cover no-repeat url('/assets/sashkinapps2.png'),
+          var(--surface);
+        overflow: hidden;
+        position: relative;
+      }
+      .brand-banner::after{
+        content:"";
+        position:absolute; inset:0;
+        background: linear-gradient(90deg,
+          color-mix(in oklab, var(--bg) 65%, transparent) 0%,
+          transparent 55%);
+        pointer-events: none;
+      }
+
+      .hero{margin:0 0 22px;padding:18px clamp(14px,3vw,22px);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);background:var(--surface)}
+      /* glass-відтінок для карток */
+      .hero, .card, footer{
+        background: color-mix(in oklab, var(--bg) 20%, transparent);
+        backdrop-filter: blur(8px) saturate(120%);
+        -webkit-backdrop-filter: blur(8px) saturate(120%);
+      }
+
       .hero h1{margin:0 0 6px;font-size:clamp(24px, 5.5vw, 40px);letter-spacing:.2px}
       .hero p{margin:8px 0 0;color:var(--muted);font-size:clamp(14px, 3.5vw, 16px)}
 
       .row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px}
       .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:14px}
-      .card{display:flex;flex-direction:column;gap:12px;border:1px solid var(--line);border-radius:18px;padding:14px;min-height:220px;background:var(--surface);box-shadow:var(--shadow)}
+      .card{display:flex;flex-direction:column;gap:12px;border:1px solid var(--line);border-radius:18px;padding:14px;min-height:220px;box-shadow:var(--shadow)}
       .app-head{display:flex;gap:12px;align-items:center}
-      .icon{width:64px;height:64px;border-radius:14px;border:1px solid var(--line);object-fit:cover;background:color-mix(in oklab, var(--bg) 85%, transparent)}
+      .icon{width:72px;height:72px;border-radius:14px;border:1px solid var(--line);object-fit:cover;background:color-mix(in oklab, var(--bg) 85%, transparent)}
       .title{font-size:18px;margin:0}
       .badge{font-size:12px;color:var(--muted);border:1px solid var(--line);padding:2px 8px;border-radius:999px}
       .desc{color:color-mix(in oklab, var(--text) 80%, transparent);line-height:1.6;margin:0}
@@ -67,7 +103,7 @@
       .btn{--b:var(--brand);text-decoration:none;display:inline-flex;align-items:center;gap:8px;border:1px solid color-mix(in oklab, var(--b) 35%, var(--line));padding:12px 14px;border-radius:12px;font-weight:700}
       .btn:hover{border-color:var(--brand)}
 
-      footer{margin:22px 0 10px;padding:12px 14px;border:1px solid var(--line);border-radius:14px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;background:color-mix(in oklab,var(--bg) 80%, transparent)}
+      footer{margin:22px 0 10px;padding:12px 14px;border:1px solid var(--line);border-radius:14px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 
       @media (prefers-reduced-motion: reduce){ *{scroll-behavior:auto} }
       :focus-visible{outline:2px solid var(--brand);outline-offset:2px;border-radius:8px}
@@ -75,15 +111,15 @@
   </head>
   <body>
     <header>
-      <div class="container topbar">
-        <div class="brand">
-          <!-- ОНОВЛЕНО: логотип як картинка замість тексту -->
+      <div class="container topbar glass">
+        <a class="brand" href="/" aria-label="На головну">
+          <!-- збільшене логотип-піктограма -->
           <img
             class="logo"
             src="/assets/sashkinapps.png"
+            srcset="/assets/sashkinapps.png 1x, /assets/sashkinapps.png 2x"
             alt="Sashkin Apps logo"
-            width="36"
-            height="36"
+            width="56" height="56"
             decoding="async"
             fetchpriority="high"
           />
@@ -91,7 +127,7 @@
             <div style="font-weight:800">Sashkin Apps</div>
             <div class="muted" data-i18n="tagline">Офіційна сторінка розробника</div>
           </div>
-        </div>
+        </a>
         <div class="controls">
           <div class="chip" role="tablist" aria-label="Language switcher">
             <button id="btn-uk" class="active" data-lang="uk" role="tab" aria-selected="true">UA</button>
@@ -102,6 +138,11 @@
         </div>
       </div>
     </header>
+
+    <!-- Банер із синім бекграундом -->
+    <div class="container">
+      <section class="brand-banner" aria-label="Sashkin Apps cover"></section>
+    </div>
 
     <main class="container">
       <section class="hero">
@@ -130,7 +171,7 @@
         en:{tagline:'Official developer page',heroTitle:'Mobile apps by Sashkin Apps',heroSubtitle:'Games and tools for Android. Fast, beautiful, and privacy-respecting.',apps:'Apps',gp:'Open in Google Play'}
       };
 
-      // SVG fallback (на випадок, якщо PNG відсутній)
+      // SVG fallback
       const svgFallback = (txt) =>
         `data:image/svg+xml,` +
         encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'>
@@ -182,7 +223,7 @@
           card.className = 'card';
           card.innerHTML = `
             <div class="app-head">
-              <img class="icon" alt="${app.title[lang]}" src="${app.icon}">
+              <img class="icon" alt="${app.title[lang]}" src="${app.icon}" loading="lazy" decoding="async">
               <div>
                 <h3 class="title">${app.title[lang]}</h3>
                 <span class="badge">Android</span>
