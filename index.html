@@ -8,14 +8,10 @@
     <title>Sashkin Apps — офіційна сторінка розробника</title>
     <meta name="description" content="Офіційний сайт Sashkin Apps: ігри та інструменти для Android. Quizary, Quotes+ та інші. Завантажуйте з Google Play." />
 
-    <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>📱</text></svg>">
-
-    <!-- Performance: завантажуємо важливі зображення раніше -->
     <link rel="preload" as="image" href="/assets/sashkinapps.png" imagesrcset="/assets/sashkinapps.png 1x, /assets/sashkinapps.png 2x" imagesizes="(min-width: 900px) 56px, 44px">
     <link rel="preload" as="image" href="/assets/sashkinapps2.png" imagesizes="100vw">
 
-    <!-- Social preview -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Sashkin Apps — офіційна сторінка розробника">
     <meta property="og:description" content="Ігри та інструменти для Android. Красиві, швидкі та з повагою до приватності.">
@@ -61,7 +57,6 @@
       .topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0}
       .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
 
-      /* лого більше й чіткіше */
       .logo{
         width: clamp(44px, 5vw, 56px);
         height: clamp(44px, 5vw, 56px);
@@ -78,7 +73,7 @@
       .chip button.active{color:var(--text);background:color-mix(in oklab, var(--bg) 70%, transparent)}
       .tbtn{border:1px solid var(--line);background:color-mix(in oklab, var(--bg) 85%, transparent);padding:8px 10px;border-radius:12px;cursor:pointer}
 
-      /* Банер */
+      /* Банер: десктоп */
       .brand-banner{
         margin:14px 0 22px;
         border:1px solid var(--line);
@@ -96,6 +91,22 @@
           linear-gradient(90deg,color-mix(in oklab, var(--bg) 70%, transparent) 0%, transparent 55%),
           radial-gradient(60% 120% at 10% 0%, rgba(255,255,255,.15), transparent 60%);
         pointer-events: none;
+      }
+
+      /* Банер: мобільний (≤740px) */
+      @media (max-width:740px){
+        .brand-banner{
+          aspect-ratio: auto;
+          height: clamp(120px, 38vw, 160px);   /* невисокий, не “вилазить” */
+          border-radius: 16px;
+          margin:10px 0 16px;
+          background-position: left 12% center; /* зміщення щоб було видно логотип S */
+          background-size: cover;
+        }
+        .brand-banner::after{
+          background:
+            linear-gradient(90deg,color-mix(in oklab, var(--bg) 65%, transparent) 0%, transparent 45%);
+        }
       }
 
       .hero{margin:0 0 22px;padding:18px clamp(14px,3vw,22px);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
@@ -183,26 +194,17 @@
       </footer>
     </main>
 
-    <!-- SEO schema -->
     <script type="application/ld+json">
-    {
-      "@context":"https://schema.org",
-      "@type":"Organization",
-      "name":"Sashkin Apps",
-      "url":"https://sashkinbro.github.io/",
-      "logo":"/assets/sashkinapps.png"
-    }
+    {"@context":"https://schema.org","@type":"Organization","name":"Sashkin Apps","url":"https://sashkinbro.github.io/","logo":"/assets/sashkinapps.png"}
     </script>
 
     <script>
-      // i18n (UK, RU, EN)
       const i18n = {
         uk:{tagline:'Офіційна сторінка розробника',heroTitle:'Мобільні додатки від Sashkin Apps',heroSubtitle:'Ігри та інструменти для Android. Красиві, швидкі та з повагою до приватності.',apps:'Додатки',gp:'Відкрити в Google Play'},
         ru:{tagline:'Официальная страница разработчика',heroTitle:'Мобильные приложения от Sashkin Apps',heroSubtitle:'Игры и инструменты для Android. Красивые, быстрые и с уважением к приватности.',apps:'Приложения',gp:'Открыть в Google Play'},
         en:{tagline:'Official developer page',heroTitle:'Mobile apps by Sashkin Apps',heroSubtitle:'Games and tools for Android. Fast, beautiful, and privacy-respecting.',apps:'Apps',gp:'Open in Google Play'}
       };
 
-      // SVG fallback
       const svgFallback = (txt) =>
         `data:image/svg+xml,` +
         encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'>
@@ -214,7 +216,6 @@
                 font-size='44' fill='#1b4bff' font-family='Inter,Arial,system-ui'>${txt}</text>
         </svg>`);
 
-      // ЛОКАЛЬНІ іконки
       const apps = [
         {
           id:'com.sbro.quizary',
@@ -272,7 +273,6 @@
         });
       }
 
-      // Language
       const btnUk = document.getElementById('btn-uk');
       const btnRu = document.getElementById('btn-ru');
       const btnEn = document.getElementById('btn-en');
@@ -286,19 +286,14 @@
         render(lang); localStorage.setItem('lang', lang);
       }
 
-      // Theme
       const themeBtn = document.getElementById('themeToggle');
-      function applyTheme(mode){
-        document.documentElement.setAttribute('data-theme', mode);
-        localStorage.setItem('theme', mode);
-      }
+      function applyTheme(mode){ document.documentElement.setAttribute('data-theme', mode); localStorage.setItem('theme', mode); }
       function initTheme(){
         const stored = localStorage.getItem('theme');
         if(stored){ applyTheme(stored); return; }
         applyTheme(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
       }
 
-      // Init
       document.getElementById('y').textContent = new Date().getFullYear();
       initTheme();
       setLang(localStorage.getItem('lang') || 'uk');
