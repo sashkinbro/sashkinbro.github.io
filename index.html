@@ -35,7 +35,16 @@
       header{position:sticky;top:0;z-index:10;background:color-mix(in oklab, var(--bg) 60%, transparent);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--line)}
       .topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0}
       .brand{display:flex;align-items:center;gap:10px}
-      .logo{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg, color-mix(in oklab, var(--brand) 20%, transparent), transparent), var(--surface);border:1px solid var(--line);display:grid;place-items:center;font-weight:800;color:var(--brand)}
+
+      /* ОНОВЛЕНО: .logo тепер — зображення */
+      .logo{
+        width:36px;
+        height:36px;
+        border-radius:10px;
+        border:1px solid var(--line);
+        object-fit:cover;
+      }
+
       .controls{display:flex;gap:8px}
       .chip{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);padding:6px 10px;border-radius:999px;background:color-mix(in oklab, var(--bg) 90%, transparent)}
       .chip button{border:0;background:transparent;padding:6px 8px;border-radius:8px;cursor:pointer;font-weight:700;color:var(--muted)}
@@ -68,7 +77,16 @@
     <header>
       <div class="container topbar">
         <div class="brand">
-          <div class="logo" aria-hidden="true">SA</div>
+          <!-- ОНОВЛЕНО: логотип як картинка замість тексту -->
+          <img
+            class="logo"
+            src="/assets/sashkinapps.png"
+            alt="Sashkin Apps logo"
+            width="36"
+            height="36"
+            decoding="async"
+            fetchpriority="high"
+          />
           <div>
             <div style="font-weight:800">Sashkin Apps</div>
             <div class="muted" data-i18n="tagline">Офіційна сторінка розробника</div>
