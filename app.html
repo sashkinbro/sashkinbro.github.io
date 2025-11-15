@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#020617" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <title>Sashkin Apps — App</title>
+    <meta name="description" content="Перегляд мобільного застосунку Sashkin Apps. Опис, можливості, підтримувані версії Android та посилання на Google Play." />
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>📱</text></svg>">
+    <link rel="preload" as="image" href="/assets/sashkinapps.png" imagesrcset="/assets/sashkinapps.png 1x, /assets/sashkinapps.png 2x" imagesizes="(min-width: 900px) 56px, 44px">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <div class="container topbar glass">
+        <a class="brand" href="index.html" aria-label="На головну">
+          <img
+            class="logo"
+            src="/assets/sashkinapps.png"
+            srcset="/assets/sashkinapps.png 1x, /assets/sashkinapps.png 2x"
+            sizes="(min-width: 900px) 56px, 44px"
+            alt="Sashkin Apps logo"
+            width="56" height="56"
+            decoding="async"
+          />
+          <div>
+            <div style="font-weight:800">Sashkin Apps</div>
+            <div class="muted" data-i18n="tagline">Офіційна сторінка розробника</div>
+          </div>
+        </a>
+        <div class="controls">
+          <div class="chip" role="tablist" aria-label="Language switcher">
+            <button id="btn-uk" class="active" data-lang="uk" role="tab" aria-selected="true">UA</button>
+            <button id="btn-ru" data-lang="ru" role="tab" aria-selected="false">RU</button>
+            <button id="btn-en" data-lang="en" role="tab" aria-selected="false">EN</button>
+          </div>
+          <button id="themeToggle" class="tbtn" aria-label="Toggle theme">🌗</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero app-hero" id="app-hero">
+        <!-- наповнюється скриптом -->
+      </section>
+
+      <section class="panel app-tabs" id="app-tabs">
+        <div class="tablist" role="tablist" aria-label="App sections">
+          <button class="tab-btn active" data-tab="overview" role="tab" aria-selected="true" data-i18n="tabOverview">
+            Огляд
+          </button>
+          <button class="tab-btn" data-tab="features" role="tab" aria-selected="false" data-i18n="tabFeatures">
+            Можливості
+          </button>
+          <button class="tab-btn" data-tab="info" role="tab" aria-selected="false" data-i18n="tabInfo">
+            Інформація
+          </button>
+        </div>
+
+        <div class="tab-panels">
+          <section id="tab-overview" class="tab-panel" role="tabpanel">
+            <h2 class="tab-title" data-i18n="tabOverview">Огляд</h2>
+            <p id="app-long"></p>
+          </section>
+
+          <section id="tab-features" class="tab-panel" role="tabpanel" hidden>
+            <h2 class="tab-title" data-i18n="tabFeatures">Можливості</h2>
+            <ul id="app-features" class="features-list"></ul>
+          </section>
+
+          <section id="tab-info" class="tab-panel" role="tabpanel" hidden>
+            <h2 class="tab-title" data-i18n="tabInfo">Інформація</h2>
+            <dl class="info-grid" id="app-info"></dl>
+          </section>
+        </div>
+      </section>
+
+      <section class="panel app-back">
+        <a href="index.html" class="back-link" data-i18n="backToApps">← Повернутися до списку додатків</a>
+      </section>
+
+      <footer>
+        <span>© <span id="y"></span> Sashkin Apps</span>
+        <span>
+          <span data-i18n="contact">Зв'язок:</span>
+          <a href="mailto:sashkinapps@gmail.com">sashkinapps@gmail.com</a>
+          ·
+          <a href="https://play.google.com/store/apps/developer?id=Sashkin+Apps" target="_blank" rel="noopener" data-i18n="devProfile">
+            Профіль розробника на Google Play
+          </a>
+        </span>
+      </footer>
+    </main>
+
+    <script>
+      const i18n = {
+        uk:{
+          tagline:'Офіційна сторінка розробника',
+          gp:'Відкрити в Google Play',
+          backToApps:'← Повернутися до списку додатків',
+          pillNew:'Нове',
+          tabOverview:'Огляд',
+          tabFeatures:'Можливості',
+          tabInfo:'Інформація',
+          infoCategory:'Категорія',
+          infoAndroid:'Підтримка Android',
+          infoSize:'Орієнтовний розмір',
+          infoIap:'Вбудовані покупки',
+          infoOffline:'Працює офлайн',
+          infoYes:'Так',
+          infoNo:'Ні',
+          infoUpdated:'Орієнтовно оновлено',
+          contact:"Зв'язок:",
+          devProfile:'Профіль розробника на Google Play'
+        },
+        ru:{
+          tagline:'Официальная страница разработчика',
+          gp:'Открыть в Google Play',
+          backToApps:'← Вернуться к списку приложений',
+          pillNew:'Новое',
+          tabOverview:'Обзор',
+          tabFeatures:'Возможности',
+          tabInfo:'Информация',
+          infoCategory:'Категория',
+          infoAndroid:'Поддержка Android',
+          infoSize:'Примерный размер',
+          infoIap:'Встроенные покупки',
+          infoOffline:'Работает офлайн',
+          infoYes:'Да',
+          infoNo:'Нет',
+          infoUpdated:'Ориентировочно обновлено',
+          contact:'Связь:',
+          devProfile:'Профиль разработчика в Google Play'
+        },
+        en:{
+          tagline:'Official developer page',
+          gp:'Open in Google Play',
+          backToApps:'← Back to apps list',
+          pillNew:'New',
+          tabOverview:'Overview',
+          tabFeatures:'Features',
+          tabInfo:'Info',
+          infoCategory:'Category',
+          infoAndroid:'Android support',
+          infoSize:'Approx. size',
+          infoIap:'In-app purchases',
+          infoOffline:'Works offline',
+          infoYes:'Yes',
+          infoNo:'No',
+          infoUpdated:'Roughly updated',
+          contact:'Contact:',
+          devProfile:'Developer profile on Google Play'
+        }
+      };
+
+      const svgFallback = (txt) =>
+        `data:image/svg+xml,` +
+        encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'>
+          <defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'>
+            <stop stop-color='#e9ecff'/><stop offset='1' stop-color='#cfd9ff'/>
+          </linearGradient></defs>
+          <rect width='100%' height='100%' rx='24' fill='url(#g)'/>
+          <text x='50%' y='54%' dominant-baseline='middle' text-anchor='middle'
+                font-size='44' fill='#1b4bff' font-family='Inter,Arial,system-ui'>${txt}</text>
+        </svg>`);
+
+      // TODO: підкоригуй minAndroid/size/updated під реальні значення для своїх додатків
+      const apps = {
+        'com.sbro.quizary':{
+          id:'com.sbro.quizary',
+          title:{
+            uk:'Quizary — Вікторина та Навчання',
+            ru:'Quizary — Викторина и Обучение',
+            en:'Quizary — Quiz & Learn'
+          },
+          short:{
+            uk:'Вікторина, навчання та челенджі в одному додатку.',
+            ru:'Викторина, обучение и челленджи в одном приложении.',
+            en:'Quiz game, trivia and learning in one app.'
+          },
+          long:{
+            uk:'Quizary поєднує вікторину, гру на ерудицію та режим навчання. Грай у короткі раунди, відкривай сотні запитань по різних темах, тренуй пам’ять та швидкість мислення. У режимі навчання ти можеш спокійно вивчити відповіді, а потім повернутися до змагання й перевірити свій прогрес.',
+            ru:'Quizary сочетает викторину, игру на эрудицию и режим обучения. Играй в короткие раунды, открывай сотни вопросов по разным темам, тренируй память и скорость мышления. В режиме обучения можно спокойно изучить ответы, а потом вернуться к соревнованию и проверить свой прогресс.',
+            en:'Quizary blends a quiz game, trivia challenge and learning mode. Play quick rounds, explore hundreds of questions across topics, train memory and thinking speed. Use Study Mode to learn first, then jump back into competition to see how much you’ve improved.'
+          },
+          category:{
+            uk:'Вікторина · Освіта',
+            ru:'Викторина · Обучение',
+            en:'Quiz · Education'
+          },
+          features:{
+            uk:[
+              'Швидкі раунди з різними рівнями складності.',
+              'Режим навчання для спокійного вивчення запитань.',
+              'Досягнення та таблиця лідерів.',
+              'Категорії з різних сфер: наука, культура, історія тощо.'
+            ],
+            ru:[
+              'Быстрые раунды с разной сложностью.',
+              'Режим обучения для спокойного изучения вопросов.',
+              'Достижения и таблица лидеров.',
+              'Категории из разных сфер: наука, культура, история и т.д.'
+            ],
+            en:[
+              'Quick rounds with multiple difficulty levels.',
+              'Study Mode to learn answers at your own pace.',
+              'Achievements and leaderboards.',
+              'Categories from many domains: science, culture, history and more.'
+            ]
+          },
+          info:{
+            minAndroid:'Android 7.0+',
+            size:'~40 MB',
+            inApp:true,
+            offline:true,
+            updated:'Regulary'
+          },
+          icon:'/assets/quizary.png',
+          fallback:'QZ',
+          link:'https://play.google.com/store/apps/details?id=com.sbro.quizary',
+          isNew:false
+        },
+        'com.sbro.qomoti':{
+          id:'com.sbro.qomoti',
+          title:{
+            uk:'Quotes+ — Щоденне Натхнення',
+            ru:'Quotes+ — Ежедневное Вдохновение',
+            en:'Quotes+ — Daily Inspiration'
+          },
+          short:{
+            uk:'2800+ мотивуючих цитат у красивому мінімалістичному оформленні.',
+            ru:'2800+ мотивирующих цитат в красивом минималистичном оформлении.',
+            en:'2800+ motivational quotes in a clean, minimal design.'
+          },
+          long:{
+            uk:'Quotes+ — це кишенькове джерело натхнення. Переглядай цитати за категоріями, додавай у вибране, повертайся до історії перегляду, створюй власні картки з цитатами та ділись ними в один дотик. Гнучкі налаштування дозволяють змінювати фон, шрифт та розмір тексту.',
+            ru:'Quotes+ — это карманный источник вдохновения. Просматривай цитаты по категориям, добавляй в избранное, возвращайся к истории, создавай собственные карточки цитат и делись ими в один тап. Гибкие настройки позволяют менять фон, шрифт и размер текста.',
+            en:'Quotes+ is your pocket source of daily inspiration. Browse quotes by category, save favorites, revisit your history, and create shareable quote cards in one tap. Flexible settings let you change background, font style and text size to match your mood.'
+          },
+          category:{
+            uk:'Цитати · Лайфстайл',
+            ru:'Цитаты · Лайфстайл',
+            en:'Quotes · Lifestyle'
+          },
+          features:{
+            uk:[
+              '2800+ цитат, розбитих за категоріями.',
+              'Обране та історія перегляду.',
+              'Віджети для головного екрана.',
+              'Створення власних карток цитат з фоном і шрифтом.'
+            ],
+            ru:[
+              '2800+ цитат по категориям.',
+              'Избранное и история просмотров.',
+              'Виджеты для главного экрана.',
+              'Создание собственных карточек цитат с фоном и шрифтом.'
+            ],
+            en:[
+              '2800+ quotes across many categories.',
+              'Favorites and quote history.',
+              'Home screen widgets.',
+              'Create your own quote cards with custom background and font.'
+            ]
+          },
+          info:{
+            minAndroid:'Android 7.0+',
+            size:'~60 MB',
+            inApp:true,
+            offline:true,
+            updated:'Regularly'
+          },
+          icon:'/assets/quotesplus.png',
+          fallback:'Q+',
+          link:'https://play.google.com/store/apps/details?id=com.sbro.qomoti',
+          isNew:false
+        },
+        'com.sbro.quizaryenglish':{
+          id:'com.sbro.quizaryenglish',
+          title:{
+            uk:'Quizary English — Вчи Англійську Грою',
+            ru:'Quizary English — Учим Английский Играя',
+            en:'Quizary English — Learn English by Playing'
+          },
+          short:{
+            uk:'Практика англійської з рівнями A1–C2 у форматі міні-тестів.',
+            ru:'Практика английского с уровнями A1–C2 в формате мини-тестов.',
+            en:'English practice from A1 to C2 through short quiz rounds.'
+          },
+          long:{
+            uk:'Quizary English допомагає прокачати граматику, лексику та читання через короткі інтерактивні завдання. Обирай свій рівень A1–C2, проходь тести, збирай трофеї та слідкуй за прогресом у власному профілі. Формат гри мотивує повертатися щодня, а режим навчання дозволяє розбирати помилки.',
+            ru:'Quizary English помогает прокачать грамматику, лексику и чтение через короткие интерактивные задания. Выбирай свой уровень A1–C2, проходи тесты, собирай трофеи и следи за прогрессом в профиле. Игровой формат мотивирует возвращаться каждый день, а режим обучения помогает разбирать ошибки.',
+            en:'Quizary English helps you improve grammar, vocabulary and reading with short interactive tasks. Choose your CEFR level from A1 to C2, complete quizzes, collect trophies and track progress in your profile. Game-like progression keeps you motivated, while learning mode helps you review mistakes.'
+          },
+          category:{
+            uk:'Мова · Освіта',
+            ru:'Язык · Обучение',
+            en:'Language · Education'
+          },
+          features:{
+            uk:[
+              'Рівні A1–C2 за шкалою CEFR.',
+              'Завдання на лексику та граматику.',
+              'Досягнення, трофеї та прогрес.',
+              'Режим навчання з розбором відповідей.'
+            ],
+            ru:[
+              'Уровни A1–C2 по шкале CEFR.',
+              'Задания на лексику и грамматику.',
+              'Достижения, трофеи и прогресс.',
+              'Режим обучения с разбором ответов.'
+            ],
+            en:[
+              'CEFR A1–C2 levels.',
+              'Vocabulary and grammar exercises.',
+              'Trophies, achievements and progress tracking.',
+              'Learning mode with answer review.'
+            ]
+          },
+          info:{
+            minAndroid:'Android 7.0+',
+            size:'~50 MB',
+            inApp:true,
+            offline:true,
+            updated:'New'
+          },
+          icon:'/assets/quizaryenglish.png',
+          fallback:'QE',
+          link:'https://play.google.com/store/apps/details?id=com.sbro.quizaryenglish',
+          isNew:true
+        },
+        'com.sbro.qray':{
+          id:'com.sbro.qray',
+          title:{
+            uk:'Qray — Сканер та Генератор QR',
+            ru:'Qray — Сканер и Генератор QR',
+            en:'Qray — QR Scanner & Generator'
+          },
+          short:{
+            uk:'Швидкий сканер QR та штрих-кодів з історією та генерацією кодів.',
+            ru:'Быстрый сканер QR и штрих-кодов с историей и генерацией кодов.',
+            en:'Fast QR & barcode scanner with history and code generator.'
+          },
+          long:{
+            uk:'Qray миттєво сканує QR-коди та штрих-коди, зберігає історію сканувань та дозволяє створювати власні коди з тексту, посилань або Wi-Fi-налаштувань. Мінімалістичний інтерфейс та підтримка темної/світлої теми роблять використання комфортним щодня.',
+            ru:'Qray мгновенно сканирует QR- и штрих-коды, сохраняет историю сканирований и позволяет создавать собственные коды из текста, ссылок или Wi-Fi-настроек. Минималистичный интерфейс и поддержка тёмной/светлой темы делают использование комфортным каждый день.',
+            en:'Qray instantly scans QR codes and barcodes, keeps a history of scans and lets you generate your own codes from text, links or Wi-Fi settings. A minimal UI plus light/dark theme support makes it comfortable to use every day.'
+          },
+          category:{
+            uk:'Інструменти · QR',
+            ru:'Инструменты · QR',
+            en:'Tools · QR'
+          },
+          features:{
+            uk:[
+              'Миттєве сканування QR- та штрих-кодів.',
+              'Історія та обране.',
+              'Створення QR-кодів з тексту, посилань і Wi-Fi.',
+              'Підтримка темної та світлої тем.'
+            ],
+            ru:[
+              'Мгновенное сканирование QR- и штрих-кодов.',
+              'История и избранное.',
+              'Создание QR-кодов из текста, ссылок и Wi-Fi.',
+              'Поддержка тёмной и светлой тем.'
+            ],
+            en:[
+              'Instant scanning for QR and barcodes.',
+              'History and favorites.',
+              'Create QR codes from text, links and Wi-Fi.',
+              'Light and dark theme support.'
+            ]
+          },
+          info:{
+            minAndroid:'Android 7.0+',
+            size:'~25 MB',
+            inApp:false,
+            offline:true,
+            updated:'New'
+          },
+          icon:'/assets/qray.png',
+          fallback:'QR',
+          link:'https://play.google.com/store/apps/details?id=com.sbro.qray',
+          isNew:true
+        }
+      };
+
+      const hero = document.getElementById('app-hero');
+      const featuresList = document.getElementById('app-features');
+      const longText = document.getElementById('app-long');
+      const infoGrid = document.getElementById('app-info');
+
+      function getLang(){
+        return document.documentElement.lang || 'uk';
+      }
+
+      function renderApp(lang){
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get('id');
+        const app = apps[id];
+        if(!app){
+          hero.innerHTML = `<p>App not found. <a href="index.html">Back to main page</a></p>`;
+          document.querySelector('.app-tabs').style.display = 'none';
+          return;
+        }
+
+        document.title = app.title[lang] + ' — Sashkin Apps';
+
+        hero.innerHTML = `
+          <div class="app-hero-head">
+            <img class="icon icon-large" src="${app.icon}" alt="${app.title[lang]}" width="96" height="96" loading="lazy" decoding="async">
+            <div class="app-hero-meta">
+              <h1 class="app-hero-title">${app.title[lang]}</h1>
+              <div class="meta-row">
+                <span class="badge">Android</span>
+                ${app.isNew ? `<span class="pill pill-new">${i18n[lang].pillNew}</span>` : ''}
+              </div>
+              <div class="category">${app.category[lang]}</div>
+            </div>
+          </div>
+          <p class="app-hero-short">${app.short[lang]}</p>
+          <div class="actions app-hero-actions">
+            <a class="btn" href="${app.link}" target="_blank" rel="noopener">
+              <span class="btn-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M3 2.5c0-1 1.1-1.6 2-1.1l15 8.5c.9.5.9 1.8 0 2.3l-15 8.5c-.9.5-2-.1-2-1.1V2.5Z"/>
+                </svg>
+              </span>
+              <span>${i18n[lang].gp}</span>
+            </a>
+          </div>
+        `;
+
+        const img = hero.querySelector('img.icon');
+        img.addEventListener('error', () => { img.src = svgFallback(app.fallback); }, { once:true });
+
+        longText.textContent = app.long[lang];
+
+        featuresList.innerHTML = '';
+        app.features[lang].forEach(f=>{
+          const li = document.createElement('li');
+          li.textContent = f;
+          featuresList.appendChild(li);
+        });
+
+        infoGrid.innerHTML = '';
+        const info = app.info;
+        const infoRows = [
+          [i18n[lang].infoCategory, app.category[lang]],
+          [i18n[lang].infoAndroid, info.minAndroid],
+          [i18n[lang].infoSize, info.size],
+          [i18n[lang].infoIap, info.inApp ? i18n[lang].infoYes : i18n[lang].infoNo],
+          [i18n[lang].infoOffline, info.offline ? i18n[lang].infoYes : i18n[lang].infoNo],
+          [i18n[lang].infoUpdated, info.updated]
+        ];
+        infoRows.forEach(([label,value])=>{
+          const dt = document.createElement('dt');
+          dt.textContent = label;
+          const dd = document.createElement('dd');
+          dd.textContent = value;
+          infoGrid.appendChild(dt);
+          infoGrid.appendChild(dd);
+        });
+
+        document.querySelectorAll('[data-i18n]').forEach(el=>{
+          const key = el.getAttribute('data-i18n');
+          if(i18n[lang][key]){
+            el.textContent = i18n[lang][key];
+          }
+        });
+      }
+
+      function setupTabs(){
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const panels = {
+          overview: document.getElementById('tab-overview'),
+          features: document.getElementById('tab-features'),
+          info: document.getElementById('tab-info')
+        };
+        tabButtons.forEach(btn=>{
+          btn.addEventListener('click', ()=>{
+            const tab = btn.dataset.tab;
+            tabButtons.forEach(b=>{
+              const active = b===btn;
+              b.classList.toggle('active', active);
+              b.setAttribute('aria-selected', String(active));
+            });
+            Object.entries(panels).forEach(([name,panel])=>{
+              if(name===tab){
+                panel.hidden = false;
+              } else {
+                panel.hidden = true;
+              }
+            });
+          });
+        });
+      }
+
+      const btnUk = document.getElementById('btn-uk');
+      const btnRu = document.getElementById('btn-ru');
+      const btnEn = document.getElementById('btn-en');
+
+      function setLang(lang){
+        document.documentElement.lang = lang;
+        [btnUk, btnRu, btnEn].forEach(b=>{
+          const active = b.dataset.lang===lang;
+          b.classList.toggle('active', active);
+          b.setAttribute('aria-selected', String(active));
+        });
+        renderApp(lang);
+        localStorage.setItem('lang', lang);
+      }
+
+      const themeBtn = document.getElementById('themeToggle');
+      function applyTheme(mode){
+        document.documentElement.setAttribute('data-theme', mode);
+        localStorage.setItem('theme', mode);
+      }
+      function initTheme(){
+        const stored = localStorage.getItem('theme');
+        if(stored){
+          applyTheme(stored);
+          return;
+        }
+        applyTheme(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      }
+
+      document.getElementById('y').textContent = new Date().getFullYear();
+      initTheme();
+      setupTabs();
+      setLang(localStorage.getItem('lang') || 'uk');
+      btnUk.onclick = () => setLang('uk');
+      btnRu.onclick = () => setLang('ru');
+      btnEn.onclick = () => setLang('en');
+      themeBtn.onclick = () =>
+        applyTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    </script>
+  </body>
+</html>
