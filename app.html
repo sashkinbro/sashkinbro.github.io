@@ -775,16 +775,11 @@
 
         renderGallery(app.id);
 
-        // Нижня кнопка, як на Play — друга CTA
+        // Нижня кнопка — тепер "Назад", у стилі кнопки, але з переходом history.back()
         ctaSecondary.innerHTML = `
-          <a class="btn btn-wide btn-ghost" href="${app.link}" target="_blank" rel="noopener">
-            <span class="btn-icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M3 2.5c0-1 1.1-1.6 2-1.1l15 8.5c.9.5.9 1.8 0 2.3l-15 8.5c-.9.5-2-.1-2-1.1V2.5Z"/>
-              </svg>
-            </span>
-            <span>${i18n[lang].gp}</span>
-          </a>
+          <button class="btn btn-wide btn-ghost" type="button" onclick="history.back()">
+            <span>${i18n[lang].backToApps}</span>
+          </button>
         `;
       }
 
