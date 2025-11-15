@@ -469,10 +469,17 @@ footer a:hover{text-decoration:underline}
     object-fit: cover;
 }
 
-/* десктоп — збільшений розмір */
+/* планшети / дрібні ноутбуки */
 @media (min-width: 768px) {
   .shot-thumb img {
-      width: 180px; /* або твій розмір */
+      width: 180px;
+  }
+}
+
+/* повноцінний десктоп */
+@media (min-width: 1200px) {
+  .shot-thumb img {
+      width: 220px;
   }
 }
 .app-gallery-panel{
