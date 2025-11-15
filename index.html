@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#020617" media="(prefers-color-scheme: dark)">
     <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
     <title>Sashkin Apps — офіційна сторінка розробника</title>
-    <meta name="description" content="Офіційний сайт Sashkin Apps: ігри та застосунки для Android. Quizary, Quotes+ та інші. Завантажуйте з Google Play." />
+    <meta name="description" content="Офіційний сайт Sashkin Apps: ігри та застосунки для Android. Quizary, Quotes+, Quizary English, Qray та інші. Завантажуйте з Google Play." />
 
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>📱</text></svg>">
     <link rel="preload" as="image" href="/assets/sashkinapps.png" imagesrcset="/assets/sashkinapps.png 1x, /assets/sashkinapps.png 2x" imagesizes="(min-width: 900px) 56px, 44px">
@@ -125,6 +125,17 @@
       </footer>
     </main>
 
+    <!-- Лайтбокс для скрінів -->
+    <div id="lightbox" class="lightbox" hidden>
+      <div class="lightbox-backdrop" data-lightbox-close></div>
+      <div class="lightbox-inner">
+        <button class="lightbox-close" type="button" aria-label="Close" data-lightbox-close>✕</button>
+        <button class="lightbox-nav lightbox-prev" type="button" aria-label="Previous" data-lightbox-prev>‹</button>
+        <button class="lightbox-nav lightbox-next" type="button" aria-label="Next" data-lightbox-next>›</button>
+        <img id="lightbox-img" alt="" loading="lazy" />
+      </div>
+    </div>
+
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"Organization","name":"Sashkin Apps","url":"https://sashkinbro.github.io/","logo":"/assets/sashkinapps.png"}
     </script>
@@ -216,7 +227,131 @@
                 font-size='44' fill='#1b4bff' font-family='Inter,Arial,system-ui'>${txt}</text>
         </svg>`);
 
-      // TODO: якщо мінімальна версія Android інша — онови ці поля також у app.html
+      // Скріни: для кожної мови свої
+      // Qray: по 5; інші додатки: по 8
+      const screenshots = {
+        'com.sbro.quizary':{
+          uk:[
+            '/assets/screens/quizary/uk/1.webp',
+            '/assets/screens/quizary/uk/2.webp',
+            '/assets/screens/quizary/uk/3.webp',
+            '/assets/screens/quizary/uk/4.webp',
+            '/assets/screens/quizary/uk/5.webp',
+            '/assets/screens/quizary/uk/6.webp',
+            '/assets/screens/quizary/uk/7.webp',
+            '/assets/screens/quizary/uk/8.webp'
+          ],
+          ru:[
+            '/assets/screens/quizary/ru/1.webp',
+            '/assets/screens/quizary/ru/2.webp',
+            '/assets/screens/quizary/ru/3.webp',
+            '/assets/screens/quizary/ru/4.webp',
+            '/assets/screens/quizary/ru/5.webp',
+            '/assets/screens/quizary/ru/6.webp',
+            '/assets/screens/quizary/ru/7.webp',
+            '/assets/screens/quizary/ru/8.webp'
+          ],
+          en:[
+            '/assets/screens/quizary/en/1.webp',
+            '/assets/screens/quizary/en/2.webp',
+            '/assets/screens/quizary/en/3.webp',
+            '/assets/screens/quizary/en/4.webp',
+            '/assets/screens/quizary/en/5.webp',
+            '/assets/screens/quizary/en/6.webp',
+            '/assets/screens/quizary/en/7.webp',
+            '/assets/screens/quizary/en/8.webp'
+          ]
+        },
+        'com.sbro.qomoti':{
+          uk:[
+            '/assets/screens/quotesplus/uk/1.webp',
+            '/assets/screens/quotesplus/uk/2.webp',
+            '/assets/screens/quotesplus/uk/3.webp',
+            '/assets/screens/quotesplus/uk/4.webp',
+            '/assets/screens/quotesplus/uk/5.webp',
+            '/assets/screens/quotesplus/uk/6.webp',
+            '/assets/screens/quotesplus/uk/7.webp',
+            '/assets/screens/quotesplus/uk/8.webp'
+          ],
+          ru:[
+            '/assets/screens/quotesplus/ru/1.webp',
+            '/assets/screens/quotesplus/ru/2.webp',
+            '/assets/screens/quotesplus/ru/3.webp',
+            '/assets/screens/quotesplus/ru/4.webp',
+            '/assets/screens/quotesplus/ru/5.webp',
+            '/assets/screens/quotesplus/ru/6.webp',
+            '/assets/screens/quotesplus/ru/7.webp',
+            '/assets/screens/quotesplus/ru/8.webp'
+          ],
+          en:[
+            '/assets/screens/quotesplus/en/1.webp',
+            '/assets/screens/quotesplus/en/2.webp',
+            '/assets/screens/quotesplus/en/3.webp',
+            '/assets/screens/quotesplus/en/4.webp',
+            '/assets/screens/quotesplus/en/5.webp',
+            '/assets/screens/quotesplus/en/6.webp',
+            '/assets/screens/quotesplus/en/7.webp',
+            '/assets/screens/quotesplus/en/8.webp'
+          ]
+        },
+        'com.sbro.quizaryenglish':{
+          uk:[
+            '/assets/screens/quizaryenglish/uk/1.webp',
+            '/assets/screens/quizaryenglish/uk/2.webp',
+            '/assets/screens/quizaryenglish/uk/3.webp',
+            '/assets/screens/quizaryenglish/uk/4.webp',
+            '/assets/screens/quizaryenglish/uk/5.webp',
+            '/assets/screens/quizaryenglish/uk/6.webp',
+            '/assets/screens/quizaryenglish/uk/7.webp',
+            '/assets/screens/quizaryenglish/uk/8.webp'
+          ],
+          ru:[
+            '/assets/screens/quizaryenglish/ru/1.webp',
+            '/assets/screens/quizaryenglish/ru/2.webp',
+            '/assets/screens/quizaryenglish/ru/3.webp',
+            '/assets/screens/quizaryenglish/ru/4.webp',
+            '/assets/screens/quizaryenglish/ru/5.webp',
+            '/assets/screens/quizaryenglish/ru/6.webp',
+            '/assets/screens/quizaryenglish/ru/7.webp',
+            '/assets/screens/quizaryenglish/ru/8.webp'
+          ],
+          en:[
+            '/assets/screens/quizaryenglish/en/1.webp',
+            '/assets/screens/quizaryenglish/en/2.webp',
+            '/assets/screens/quizaryenglish/en/3.webp',
+            '/assets/screens/quizaryenglish/en/4.webp',
+            '/assets/screens/quizaryenglish/en/5.webp',
+            '/assets/screens/quizaryenglish/en/6.webp',
+            '/assets/screens/quizaryenglish/en/7.webp',
+            '/assets/screens/quizaryenglish/en/8.webp'
+          ]
+        },
+        'com.sbro.qray':{
+          uk:[
+            '/assets/screens/qray/uk/1.webp',
+            '/assets/screens/qray/uk/2.webp',
+            '/assets/screens/qray/uk/3.webp',
+            '/assets/screens/qray/uk/4.webp',
+            '/assets/screens/qray/uk/5.webp'
+          ],
+          ru:[
+            '/assets/screens/qray/ru/1.webp',
+            '/assets/screens/qray/ru/2.webp',
+            '/assets/screens/qray/ru/3.webp',
+            '/assets/screens/qray/ru/4.webp',
+            '/assets/screens/qray/ru/5.webp'
+          ],
+          en:[
+            '/assets/screens/qray/en/1.webp',
+            '/assets/screens/qray/en/2.webp',
+            '/assets/screens/qray/en/3.webp',
+            '/assets/screens/qray/en/4.webp',
+            '/assets/screens/qray/en/5.webp'
+          ]
+        }
+      };
+
+      // TODO: якщо мінімальна версія Android інша — онови також у app.html
       const apps = [
         {
           id:'com.sbro.quizary',
@@ -232,9 +367,9 @@
             en:'Quiz · Education'
           },
           desc:{
-            uk:'Тренуй пам’ять і ерудицію: швидкі раунди, сотні запитань, режим навчання, досягнення та таблиця лідерів.',
-            ru:'Тренируй память и эрудицию: быстрые раунды, сотни вопросов, режим обучения, достижения и таблица лидеров.',
-            en:'Train memory and knowledge: quick rounds, hundreds of questions, Learning mode, achievements & leaderboards.'
+            uk:'Гра-вікторина та навчання в одному додатку: живі таблиці лідерів, досягнення, сотні запитань за темами та розумний режим навчання, який дозволяє спершу вивчити матеріал, а вже потім змагатись.',
+            ru:'Игра-викторина и обучение в одном приложении: живые таблицы лидеров, достижения, сотни вопросов по темам и умный режим обучения, который позволяет сначала разобраться в материале, а потом соревноваться.',
+            en:'A polished quiz and learning app in one: live leaderboards, achievements, hundreds of questions across topics and a smart Study Mode so you can learn first and compete later.'
           },
           icon:'/assets/quizary.png',
           fallback:'QZ',
@@ -255,9 +390,9 @@
             en:'Quotes · Lifestyle'
           },
           desc:{
-            uk:'2800+ цитат за категоріями, обрані, історія, віджети та шаринг. Створюй власні картки цитат.',
-            ru:'2800+ цитат по категориям, избранное, история, виджеты и шаринг. Создавай собственные карточки цитат.',
-            en:'2800+ quotes by categories, favorites, history, widgets & sharing. Create your own quote cards.'
+            uk:'Понад 2800 цитат для мотивації та настрою: категорії, обране, історія, віджети, власні картки з фоном та шрифтами й автоматичне перемикання мови.',
+            ru:'Более 2800 цитат для мотивации и настроения: категории, избранное, история, виджеты, собственные карточки с фоном и шрифтами и автоматическое переключение языка.',
+            en:'2800+ uplifting quotes with categories, favorites, history, widgets, custom quote cards and automatic language switching for a clean daily inspiration flow.'
           },
           icon:'/assets/quotesplus.png',
           fallback:'Q+',
@@ -278,9 +413,9 @@
             en:'Language · Education'
           },
           desc:{
-            uk:'Вчи англійську через гру: рівні A1–C2, словник і граматика, різні режими та трофеї з таблицею лідерів.',
-            ru:'Учите английский в игровом формате: уровни A1–C2, лексика и грамматика, режимы и трофеи с таблицей лидеров.',
-            en:'Level up your English through play: CEFR A1–C2, vocabulary & grammar practice, fun game modes plus trophies and leaderboards.'
+            uk:'Прокачуй англійську з рівнів A1–C2 у форматі коротких ігор: тести, “знаю/не знаю”, складання речень, перемішані слова, рівневі тести, трофеї та таблиці лідерів.',
+            ru:'Прокачивай английский с уровней A1–C2 в формате коротких игр: тесты, «знаю/не знаю», составление предложений, перемешанные слова, уровневые тесты, трофеи и таблицы лидеров.',
+            en:'Level up your English from A1 to C2 with short game-like sessions: quizzes, know/don’t know, sentence builder, word unscramble, level tests, trophies and leaderboards.'
           },
           icon:'/assets/quizaryenglish.png',
           fallback:'QE',
@@ -301,9 +436,9 @@
             en:'Tools · QR'
           },
           desc:{
-            uk:'Легкий сканер і генератор QR-кодів: миттєве сканування, історія, обране, створення кодів з тексту, лінків та Wi-Fi, підтримка темного й світлого режимів.',
-            ru:'Лёгкий сканер и генератор QR-кодов: мгновенное сканирование, история, избранное, создание кодов из текста, ссылок и Wi-Fi, поддержка тёмной и светлой тем.',
-            en:'Lightweight QR scanner & generator: instant scanning, history, favorites, create codes from text, links and Wi-Fi with light/dark theme support.'
+            uk:'Швидкий сканер та генератор QR-кодів: миттєве сканування, історія, обране, створення власних кодів з тексту, посилань і Wi-Fi, вибір розміру зображення та підтримка світлої/темної теми.',
+            ru:'Быстрый сканер и генератор QR-кодов: мгновенное сканирование, история, избранное, создание собственных кодов из текста, ссылок и Wi-Fi, выбор размера изображения и поддержка светлой/тёмной темы.',
+            en:'Lightweight QR scanner & generator: instant scans, history, favorites, custom codes from text/links/Wi-Fi, adjustable output size and full light/dark theme support.'
           },
           icon:'/assets/qray.png',
           fallback:'QR',
@@ -314,7 +449,50 @@
 
       const grid = document.getElementById('apps');
 
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      let lightboxApp = null;
+      let lightboxIndex = 0;
+      let currentLang = 'uk';
+
+      function openLightbox(appId, index){
+        const listByLang = screenshots[appId] && screenshots[appId][currentLang];
+        if(!listByLang || !listByLang.length) return;
+        lightboxApp = appId;
+        lightboxIndex = index;
+        if(lightboxIndex < 0) lightboxIndex = listByLang.length - 1;
+        if(lightboxIndex >= listByLang.length) lightboxIndex = 0;
+        lightboxImg.src = listByLang[lightboxIndex];
+        lightbox.hidden = false;
+      }
+      function closeLightbox(){
+        lightbox.hidden = true;
+        lightboxApp = null;
+      }
+      function stepLightbox(delta){
+        if(lightboxApp==null) return;
+        openLightbox(lightboxApp, lightboxIndex + delta);
+      }
+
+      lightbox.addEventListener('click', (e)=>{
+        if(e.target.hasAttribute('data-lightbox-close')){
+          closeLightbox();
+        } else if(e.target.hasAttribute('data-lightbox-prev')){
+          stepLightbox(-1);
+        } else if(e.target.hasAttribute('data-lightbox-next')){
+          stepLightbox(1);
+        }
+      });
+      document.addEventListener('keydown', (e)=>{
+        if(lightbox.hidden) return;
+        if(e.key === 'Escape') closeLightbox();
+        if(e.key === 'ArrowLeft') stepLightbox(-1);
+        if(e.key === 'ArrowRight') stepLightbox(1);
+      });
+
       function render(lang){
+        currentLang = lang;
+
         document.querySelectorAll('[data-i18n]').forEach(el=>{
           const key = el.getAttribute('data-i18n');
           if(i18n[lang][key]){
@@ -324,6 +502,7 @@
 
         grid.innerHTML = '';
         apps.forEach(app=>{
+          const shots = screenshots[app.id] && screenshots[app.id][lang] || [];
           const card = document.createElement('article');
           card.className = 'card';
           card.innerHTML = `
@@ -340,6 +519,15 @@
               </div>
             </div>
             <p class="desc">${app.desc[lang]}</p>
+            ${shots.length ? `
+              <div class="shots-strip" aria-label="Screenshots">
+                ${shots.slice(0,4).map((src,idx)=>`
+                  <button class="shot-thumb" type="button" data-app="${app.id}" data-idx="${idx}" aria-label="Open screenshot ${idx+1}">
+                    <img src="${src}" loading="lazy" decoding="async" alt="">
+                  </button>
+                `).join('')}
+              </div>
+            ` : ''}
             <div class="actions">
               <a class="btn" href="${app.link}" target="_blank" rel="noopener">
                 <span class="btn-icon" aria-hidden="true">
@@ -348,6 +536,9 @@
                   </svg>
                 </span>
                 <span>${i18n[lang].gp}</span>
+              </a>
+              <a class="btn btn-ghost" href="app.html?id=${encodeURIComponent(app.id)}">
+                ${i18n[lang].details}
               </a>
             </div>`;
 
@@ -361,6 +552,16 @@
 
           const img = card.querySelector('img.icon');
           img.addEventListener('error', () => { img.src = svgFallback(app.fallback); }, { once:true });
+
+          // обробник для скрінів
+          card.querySelectorAll('.shot-thumb').forEach(btn=>{
+            btn.addEventListener('click', ()=>{
+              const appId = btn.dataset.app;
+              const idx = Number(btn.dataset.idx)||0;
+              openLightbox(appId, idx);
+            });
+          });
+
           grid.appendChild(card);
         });
       }
