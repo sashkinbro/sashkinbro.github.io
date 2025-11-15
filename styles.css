@@ -462,11 +462,8 @@ footer a:hover{text-decoration:underline}
   overflow:hidden;
   box-shadow:0 4px 16px rgba(15,23,42,.18);
 }
-.shot-thumb img{
-  display:block;
-  width:130px;
-  aspect-ratio:9/19;
-  object-fit:cover;
+.shot-thumb img {
+    width: 300px;
 }
 .app-gallery-panel{
   margin-top:18px;
