@@ -129,7 +129,6 @@ header .glass{
     radial-gradient(60% 120% at 10% 0%, rgba(255,255,255,.15), transparent 60%);
   pointer-events: none;
 }
-/* мобільний банер */
 @media (max-width:740px){
   .brand-banner{
     aspect-ratio: auto;
@@ -268,6 +267,9 @@ header .glass{
   display:inline-flex;
   align-items:center;
   justify-content:center;
+}
+.btn-ghost{
+  background:transparent;
 }
 
 /* ПАНЕЛІ (about/faq/app) */
@@ -413,6 +415,107 @@ footer a:hover{text-decoration:underline}
   color:var(--brand);
 }
 .back-link:hover{text-decoration:underline}
+
+/* СКРІНШОТИ (головна + app) */
+.shots-strip{
+  margin-top:8px;
+  display:flex;
+  gap:8px;
+  overflow-x:auto;
+  padding-bottom:4px;
+}
+.shot-thumb{
+  border:0;
+  padding:0;
+  cursor:pointer;
+  background:transparent;
+  flex:0 0 auto;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 4px 16px rgba(15,23,42,.18);
+}
+.shot-thumb img{
+  display:block;
+  width:110px;
+  height:64px;
+  object-fit:cover;
+}
+.app-gallery-panel{
+  margin-top:18px;
+}
+.app-gallery{
+  margin-top:10px;
+  display:flex;
+  gap:10px;
+  overflow-x:auto;
+  padding-bottom:4px;
+}
+.app-gallery .app-shot img{
+  width:170px;
+  height:96px;
+}
+.screens-note{
+  margin:4px 0 0;
+  font-size:12px;
+  color:var(--muted);
+}
+
+/* ЛАЙТБОКС */
+.lightbox{
+  position:fixed;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:50;
+}
+.lightbox[hidden]{display:none}
+.lightbox-backdrop{
+  position:absolute;
+  inset:0;
+  background:rgba(15,23,42,.75);
+}
+.lightbox-inner{
+  position:relative;
+  max-width:min(1000px, 96vw);
+  max-height:90vh;
+  border-radius:18px;
+  overflow:hidden;
+  background:#020617;
+  padding:10px;
+  box-shadow:0 30px 90px rgba(0,0,0,.8);
+}
+.lightbox img{
+  max-width:100%;
+  max-height:80vh;
+  border-radius:12px;
+}
+.lightbox-close{
+  position:absolute;
+  top:8px;
+  right:8px;
+  border:0;
+  background:rgba(15,23,42,.8);
+  color:#e5e7eb;
+  border-radius:999px;
+  width:32px;
+  height:32px;
+  cursor:pointer;
+}
+.lightbox-nav{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  border:0;
+  background:rgba(15,23,42,.8);
+  color:#e5e7eb;
+  border-radius:999px;
+  width:36px;
+  height:36px;
+  cursor:pointer;
+}
+.lightbox-prev{left:8px}
+.lightbox-next{right:8px}
 
 /* Фокус */
 :focus-visible{
