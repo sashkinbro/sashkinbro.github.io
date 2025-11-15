@@ -86,7 +86,7 @@
       </section>
 
       <section class="panel app-back">
-        <a href="index.html" class="back-link" data-i18n="backToApps">← Повернутися до списку додатків</a>
+        <div id="app-cta-secondary"></div>
       </section>
 
       <footer>
@@ -302,7 +302,7 @@
             '/assets/screens/qray/uk/3.webp',
             '/assets/screens/qray/uk/4.webp',
             '/assets/screens/qray/uk/5.webp',
-            '/assets/screens/qray/uk/6.webp',
+            '/assets/screens/qray/uk/6.webp'
           ],
           ru:[
             '/assets/screens/qray/ru/1.webp',
@@ -636,6 +636,7 @@
       const longText = document.getElementById('app-long');
       const infoGrid = document.getElementById('app-info');
       const gallery = document.getElementById('app-gallery');
+      const ctaSecondary = document.getElementById('app-cta-secondary');
 
       const lightbox = document.getElementById('lightbox');
       const lightboxImg = document.getElementById('lightbox-img');
@@ -735,10 +736,8 @@
         const img = hero.querySelector('img.icon');
         img.addEventListener('error', () => { img.src = svgFallback(app.fallback); }, { once:true });
 
-        // Огляд — дозволяємо багаторядковий текст
         longText.textContent = app.long[lang];
 
-        // Можливості
         featuresList.innerHTML = '';
         app.features[lang].forEach(f=>{
           const li = document.createElement('li');
@@ -746,7 +745,6 @@
           featuresList.appendChild(li);
         });
 
-        // Інформація
         infoGrid.innerHTML = '';
         const info = app.info;
         const rows = [
@@ -768,7 +766,6 @@
           infoGrid.appendChild(dd);
         });
 
-        // локалізація статичних текстів
         document.querySelectorAll('[data-i18n]').forEach(el=>{
           const key = el.getAttribute('data-i18n');
           if(i18n[lang][key]){
@@ -777,6 +774,18 @@
         });
 
         renderGallery(app.id);
+
+        // Нижня кнопка, як на Play — друга CTA
+        ctaSecondary.innerHTML = `
+          <a class="btn btn-wide btn-ghost" href="${app.link}" target="_blank" rel="noopener">
+            <span class="btn-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3 2.5c0-1 1.1-1.6 2-1.1l15 8.5c.9.5.9 1.8 0 2.3l-15 8.5c-.9.5-2-.1-2-1.1V2.5Z"/>
+              </svg>
+            </span>
+            <span>${i18n[lang].gp}</span>
+          </a>
+        `;
       }
 
       function setupTabs(){
