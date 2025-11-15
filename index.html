@@ -228,7 +228,7 @@
         </svg>`);
 
       // Скріни: для кожної мови свої
-      // Qray: по 5; інші додатки: по 8
+      // Qray: по 6; інші додатки: по 8
       const screenshots = {
         'com.sbro.quizary':{
           uk:[
@@ -341,7 +341,7 @@
             '/assets/screens/qray/ru/3.webp',
             '/assets/screens/qray/ru/4.webp',
             '/assets/screens/qray/ru/5.webp',
-             '/assets/screens/qray/ru/6.webp'
+            '/assets/screens/qray/ru/6.webp'
           ],
           en:[
             '/assets/screens/qray/en/1.webp',
@@ -556,7 +556,6 @@
           const img = card.querySelector('img.icon');
           img.addEventListener('error', () => { img.src = svgFallback(app.fallback); }, { once:true });
 
-          // обробник для скрінів
           card.querySelectorAll('.shot-thumb').forEach(btn=>{
             btn.addEventListener('click', ()=>{
               const appId = btn.dataset.app;
