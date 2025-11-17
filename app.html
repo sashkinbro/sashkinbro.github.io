@@ -43,7 +43,6 @@
 
     <main class="container">
       <section class="hero app-hero" id="app-hero">
-        <!-- наповнюється скриптом -->
       </section>
 
       <section class="panel app-gallery-panel">
@@ -102,7 +101,7 @@
       </footer>
     </main>
 
-    <!-- Лайтбокс для скрінів -->
+  
     <div id="lightbox" class="lightbox" hidden>
       <div class="lightbox-backdrop" data-lightbox-close></div>
       <div class="lightbox-inner">
@@ -197,7 +196,7 @@
                 font-size='44' fill='#1b4bff' font-family='Inter,Arial,system-ui'>${txt}</text>
         </svg>`);
 
-      // ті самі шляхи скрінів, що в index.html
+
       const screenshots = {
         'com.sbro.quizary':{
           uk:[
@@ -323,7 +322,7 @@
         }
       };
 
-      // TODO: відкоригуй minAndroid/size/updated під реальні значення
+   
       const apps = {
         'com.sbro.quizary':{
           id:'com.sbro.quizary',
@@ -775,7 +774,7 @@
 
         renderGallery(app.id);
 
-        // Нижня кнопка — тепер "Назад", у стилі кнопки, але з переходом history.back()
+        
         ctaSecondary.innerHTML = `
           <button class="btn btn-wide btn-ghost" type="button" onclick="history.back()">
             <span>${i18n[lang].backToApps}</span>
