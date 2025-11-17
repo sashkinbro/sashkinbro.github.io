@@ -3,7 +3,6 @@ html,body{margin:0;padding:0}
 img{max-width:100%;display:block}
 button{font:inherit}
 
-/* ТЕМИ */
 :root{
   --bg:#f7f8fc;
   --bg-accent:#ffffff;
@@ -15,7 +14,6 @@ button{font:inherit}
   --shadow:0 10px 30px rgba(24,39,75,.08);
 }
 
-/* dark за замовчуванням */
 @media (prefers-color-scheme: dark){
   :root{
     --bg:#020617;
@@ -42,7 +40,6 @@ button{font:inherit}
   }
 }
 
-/* data-theme manual */
 [data-theme="light"]{
   --bg:#f7f8fc;
   --bg-accent:#ffffff;
@@ -69,14 +66,14 @@ button{font:inherit}
   box-shadow:0 0 0 1px rgba(15,23,42,.9),0 0 18px rgba(59,130,246,.55);
   background:#020617;
 }
-/* У світлій темі — чиста PNG без рамок */
+
 [data-theme="light"] .logo{
   border:none;
   box-shadow:none;
   background:transparent;
 }
 
-/* БАЗА */
+
 body{
   font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial;
   color:var(--text);
@@ -85,7 +82,7 @@ body{
 }
 .container{max-width:1200px;margin:0 auto;padding:16px clamp(16px,3.5vw,28px)}
 
-/* Хедер */
+
 header{position:sticky;top:0;z-index:10;border-bottom:1px solid var(--line)}
 header .glass{
   background: color-mix(in oklab, var(--bg) 38%, transparent);
@@ -110,7 +107,7 @@ header .glass{
 .chip button.active{color:var(--text);background:color-mix(in oklab, var(--bg) 70%, transparent)}
 .tbtn{border:1px solid var(--line);background:color-mix(in oklab, var(--bg) 85%, transparent);padding:8px 10px;border-radius:12px;cursor:pointer}
 
-/* Банер */
+
 .brand-banner{
   margin:14px 0 22px;
   border:1px solid var(--line);
@@ -144,7 +141,7 @@ header .glass{
   }
 }
 
-/* ПАНЕЛІ / КАРТКИ */
+
 .hero{
   margin:0 0 22px;
   padding:18px clamp(14px,3vw,22px);
@@ -164,7 +161,7 @@ header .glass{
 .row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px}
 .grid{
   display:grid;
-  grid-template-columns:minmax(0,1fr); /* одна картка в рядок на всіх екранах */
+  grid-template-columns:minmax(0,1fr);
   gap:14px;
   margin-top:14px;
 }
@@ -249,7 +246,7 @@ header .glass{
 }
 .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto}
 
-/* КНОПКИ */
+
 .btn{
   --b:var(--brand);
   text-decoration:none;
@@ -278,7 +275,7 @@ header .glass{
   background:transparent;
 }
 
-/* ПАНЕЛІ (about/faq/app) */
+
 .panel{
   margin-top:22px;
   padding:18px clamp(14px,3vw,22px);
@@ -293,7 +290,7 @@ header .glass{
 }
 .about-list li+li{margin-top:4px}
 
-/* FAQ */
+
 .faq-items details{
   border:1px solid var(--line);
   border-radius:12px;
@@ -313,7 +310,7 @@ header .glass{
   font-size:14px;
 }
 
-/* FOOTER */
+
 footer{
   margin:22px 0 10px;
   padding:12px 14px;
@@ -328,7 +325,7 @@ footer{
 footer a{text-decoration:none;color:inherit}
 footer a:hover{text-decoration:underline}
 
-/* APP DETAIL HERO */
+
 .app-hero{
   margin-top:18px;
 }
@@ -355,7 +352,7 @@ footer a:hover{text-decoration:underline}
   margin-top:16px;
 }
 
-/* TABS */
+
 .app-tabs{
   margin-top:18px;
 }
@@ -411,32 +408,32 @@ footer a:hover{text-decoration:underline}
   margin:0;
 }
 
-/* back button панель */
+
 .app-back{
   margin-top:16px;
   display:flex;
   justify-content:flex-start;
 }
 
-/* стилі для кнопки "Назад" */
+
 .app-back .btn{
   width:100%;
   justify-content:center;
 }
 
-/* базовий фон для "прозорої" кнопки */
+
 .app-back .btn-ghost{
   background:color-mix(in oklab, var(--bg) 86%, transparent);
 }
 
-/* темна тема — зробити кнопку помітною */
+
 [data-theme="dark"] .app-back .btn-ghost{
   background:rgba(15,23,42,.9);
   border-color:rgba(59,130,246,.8);
   color:#e5ecff;
 }
 
-/* трохи підсвітити ховер окремо для цієї кнопки */
+
 .app-back .btn-ghost:hover{
   transform:translateY(-1px);
   box-shadow:0 8px 24px rgba(24,39,75,.18);
@@ -444,7 +441,7 @@ footer a:hover{text-decoration:underline}
   background:color-mix(in oklab, var(--bg) 74%, transparent);
 }
 
-/* СКРІНШОТИ (головна + app) */
+
 .shots-strip{
   margin-top:8px;
   display:flex;
@@ -462,21 +459,21 @@ footer a:hover{text-decoration:underline}
   overflow:hidden;
   box-shadow:0 4px 16px rgba(15,23,42,.18);
 }
-/* мобільна версія — маленькі прев’ю */
+
 .shot-thumb img {
     width: 130px;
     aspect-ratio: 9/19;
     object-fit: cover;
 }
 
-/* планшети / дрібні ноутбуки */
+
 @media (min-width: 768px) {
   .shot-thumb img {
       width: 180px;
   }
 }
 
-/* повноцінний десктоп */
+
 @media (min-width: 1200px) {
   .shot-thumb img {
       width: 220px;
@@ -503,7 +500,7 @@ footer a:hover{text-decoration:underline}
   color:var(--muted);
 }
 
-/* ЛАЙТБОКС */
+
 .lightbox{
   position:fixed;
   inset:0;
@@ -560,7 +557,7 @@ footer a:hover{text-decoration:underline}
 .lightbox-prev{left:8px}
 .lightbox-next{right:8px}
 
-/* Фокус */
+
 :focus-visible{
   outline:2px solid var(--brand);
   outline-offset:2px;
