@@ -1,0 +1,124 @@
+{
+  "com.sbro.quizary": {
+    "uk": [
+      "/assets/screens/quizary/uk/1.webp",
+      "/assets/screens/quizary/uk/2.webp",
+      "/assets/screens/quizary/uk/3.webp",
+      "/assets/screens/quizary/uk/4.webp",
+      "/assets/screens/quizary/uk/5.webp",
+      "/assets/screens/quizary/uk/6.webp",
+      "/assets/screens/quizary/uk/7.webp",
+      "/assets/screens/quizary/uk/8.webp"
+    ],
+    "ru": [
+      "/assets/screens/quizary/ru/1.webp",
+      "/assets/screens/quizary/ru/2.webp",
+      "/assets/screens/quizary/ru/3.webp",
+      "/assets/screens/quizary/ru/4.webp",
+      "/assets/screens/quizary/ru/5.webp",
+      "/assets/screens/quizary/ru/6.webp",
+      "/assets/screens/quizary/ru/7.webp",
+      "/assets/screens/quizary/ru/8.webp"
+    ],
+    "en": [
+      "/assets/screens/quizary/en/1.webp",
+      "/assets/screens/quizary/en/2.webp",
+      "/assets/screens/quizary/en/3.webp",
+      "/assets/screens/quizary/en/4.webp",
+      "/assets/screens/quizary/en/5.webp",
+      "/assets/screens/quizary/en/6.webp",
+      "/assets/screens/quizary/en/7.webp",
+      "/assets/screens/quizary/en/8.webp"
+    ]
+  },
+  "com.sbro.qomoti": {
+    "uk": [
+      "/assets/screens/quotesplus/uk/1.webp",
+      "/assets/screens/quotesplus/uk/2.webp",
+      "/assets/screens/quotesplus/uk/3.webp",
+      "/assets/screens/quotesplus/uk/4.webp",
+      "/assets/screens/quotesplus/uk/5.webp",
+      "/assets/screens/quotesplus/uk/6.webp",
+      "/assets/screens/quotesplus/uk/7.webp",
+      "/assets/screens/quotesplus/uk/8.webp"
+    ],
+    "ru": [
+      "/assets/screens/quotesplus/ru/1.webp",
+      "/assets/screens/quotesplus/ru/2.webp",
+      "/assets/screens/quotesplus/ru/3.webp",
+      "/assets/screens/quotesplus/ru/4.webp",
+      "/assets/screens/quotesplus/ru/5.webp",
+      "/assets/screens/quotesplus/ru/6.webp",
+      "/assets/screens/quotesplus/ru/7.webp",
+      "/assets/screens/quotesplus/ru/8.webp"
+    ],
+    "en": [
+      "/assets/screens/quotesplus/en/1.webp",
+      "/assets/screens/quotesplus/en/2.webp",
+      "/assets/screens/quotesplus/en/3.webp",
+      "/assets/screens/quotesplus/en/4.webp",
+      "/assets/screens/quotesplus/en/5.webp",
+      "/assets/screens/quotesplus/en/6.webp",
+      "/assets/screens/quotesplus/en/7.webp",
+      "/assets/screens/quotesplus/en/8.webp"
+    ]
+  },
+  "com.sbro.quizaryenglish": {
+    "uk": [
+      "/assets/screens/quizaryenglish/uk/1.webp",
+      "/assets/screens/quizaryenglish/uk/2.webp",
+      "/assets/screens/quizaryenglish/uk/3.webp",
+      "/assets/screens/quizaryenglish/uk/4.webp",
+      "/assets/screens/quizaryenglish/uk/5.webp",
+      "/assets/screens/quizaryenglish/uk/6.webp",
+      "/assets/screens/quizaryenglish/uk/7.webp",
+      "/assets/screens/quizaryenglish/uk/8.webp"
+    ],
+    "ru": [
+      "/assets/screens/quizaryenglish/ru/1.webp",
+      "/assets/screens/quizaryenglish/ru/2.webp",
+      "/assets/screens/quizaryenglish/ru/3.webp",
+      "/assets/screens/quizaryenglish/ru/4.webp",
+      "/assets/screens/quizaryenglish/ru/5.webp",
+      "/assets/screens/quizaryenglish/ru/6.webp",
+      "/assets/screens/quizaryenglish/ru/7.webp",
+      "/assets/screens/quizaryenglish/ru/8.webp"
+    ],
+    "en": [
+      "/assets/screens/quizaryenglish/en/1.webp",
+      "/assets/screens/quizaryenglish/en/2.webp",
+      "/assets/screens/quizaryenglish/en/3.webp",
+      "/assets/screens/quizaryenglish/en/4.webp",
+      "/assets/screens/quizaryenglish/en/5.webp",
+      "/assets/screens/quizaryenglish/en/6.webp",
+      "/assets/screens/quizaryenglish/en/7.webp",
+      "/assets/screens/quizaryenglish/en/8.webp"
+    ]
+  },
+  "com.sbro.qray": {
+    "uk": [
+      "/assets/screens/qray/uk/1.webp",
+      "/assets/screens/qray/uk/2.webp",
+      "/assets/screens/qray/uk/3.webp",
+      "/assets/screens/qray/uk/4.webp",
+      "/assets/screens/qray/uk/5.webp",
+      "/assets/screens/qray/uk/6.webp"
+    ],
+    "ru": [
+      "/assets/screens/qray/ru/1.webp",
+      "/assets/screens/qray/ru/2.webp",
+      "/assets/screens/qray/ru/3.webp",
+      "/assets/screens/qray/ru/4.webp",
+      "/assets/screens/qray/ru/5.webp",
+      "/assets/screens/qray/ru/6.webp"
+    ],
+    "en": [
+      "/assets/screens/qray/en/1.webp",
+      "/assets/screens/qray/en/2.webp",
+      "/assets/screens/qray/en/3.webp",
+      "/assets/screens/qray/en/4.webp",
+      "/assets/screens/qray/en/5.webp",
+      "/assets/screens/qray/en/6.webp"
+    ]
+  }
+}

@@ -1,0 +1,338 @@
+{
+  "order": [
+    "com.sbro.quizary",
+    "com.sbro.qomoti",
+    "com.sbro.quizaryenglish",
+    "com.sbro.qray"
+  ],
+  "byId": {
+    "com.sbro.quizary": {
+      "id": "com.sbro.quizary",
+      "title": {
+        "uk": "Quizary — Вікторина та Навчання",
+        "ru": "Quizary — Викторина и Обучение",
+        "en": "Quizary — Quiz & Learn"
+      },
+      "short": {
+        "uk": "Розумна вікторина з режимом навчання, подіумом лідерів та багатьма темами.",
+        "ru": "Умная викторина с режимом обучения, таблицей лидеров и множеством тем.",
+        "en": "A smart quiz game with Study Mode, leaderboards and a wide range of topics."
+      },
+      "long": {
+        "uk": "Quizary поєднує класичну вікторину, челендж на ерудицію та окремий режим навчання. Можна грати короткими сесіями у транспорті чи робити довгі марафони, поступово відкриваючи нові теми. Живі таблиці лідерів, досягнення та щоденні виклики мотивують повертатися, а режим навчання дозволяє спершу спокійно розібратися з відповідями й підсилити слабкі категорії.",
+        "ru": "Quizary сочетает классическую викторину, испытание на эрудицию и отдельный режим обучения. Можно играть короткими сессиями в дороге или устраивать длинные марафоны, постепенно открывая новые темы. Живые таблицы лидеров, достижения и ежедневные задания мотивируют возвращаться, а режим обучения помогает спокойно разобрать ответы и усилить слабые категории.",
+        "en": "Quizary mixes a classic quiz, trivia challenge and dedicated Study Mode. You can play in short bursts on the go or dive into longer sessions, unlocking new topics over time. Live leaderboards, achievements and daily challenges keep you motivated, while Study Mode lets you review explanations, revisit missed questions and steadily fix weak spots."
+      },
+      "category": {
+        "uk": "Вікторина · Освіта",
+        "ru": "Викторина · Обучение",
+        "en": "Quiz · Education"
+      },
+      "features": {
+        "uk": [
+          "Швидкі раунди з різною складністю — ідеально для коротких перерв.",
+          "Жива таблиця лідерів з оновленням рейтингу в реальному часі.",
+          "Досягнення за серії перемог, точність і прогрес у категоріях.",
+          "Режим навчання зі зрозумілими поясненнями та повторенням помилкових запитань.",
+          "Великі тематичні блоки: географія, наука, історія, культура, спорт, логіка тощо.",
+          "Статистика з кращими результатами, середнім балом і “тепловою мапою” по темах.",
+          "Google Sign-In та хмарна синхронізація результатів між пристроями.",
+          "Темна тема та охайний інтерфейс, який не відволікає від гри."
+        ],
+        "ru": [
+          "Быстрые раунды с разной сложностью — отлично для коротких пауз.",
+          "Живая таблица лидеров с обновлением рейтинга в реальном времени.",
+          "Достижения за серии побед, точность и прогресс по категориям.",
+          "Режим обучения с понятными объяснениями и повторением ошибочных вопросов.",
+          "Крупные тематические блоки: география, наука, история, культура, спорт, логика и др.",
+          "Статистика с лучшими результатами, средним баллом и “тепловой картой” по темам.",
+          "Авторизация через Google и облачная синхронизация прогресса.",
+          "Тёмная тема и аккуратный интерфейс без отвлекающих элементов."
+        ],
+        "en": [
+          "Quick rounds with flexible difficulty — perfect for short breaks.",
+          "Live leaderboards that update in real time as you play.",
+          "Achievements for streaks, accuracy and category mastery.",
+          "Study Mode with short explanations and easy review of missed questions.",
+          "Rich topic map: geography, science, history, culture, sports, logic and more.",
+          "Deep statistics with best scores, averages and a category “heatmap”.",
+          "Google Sign-In and secure cloud sync across your devices.",
+          "Dark theme and clean interface focused purely on the quiz."
+        ]
+      },
+      "info": {
+        "minAndroid": "Android 7.0+",
+        "size": "~40 MB",
+        "inApp": true,
+        "offline": true,
+        "updated": "Регулярні оновлення",
+        "privacy": {
+          "uk": "Авторизація та результати зберігаються у Firebase з шифруванням даних. Особисті дані не передаються третім сторонам, результати можна видалити за запитом.",
+          "ru": "Авторизация и результаты сохраняются в Firebase с шифрованием данных. Личные данные не передаются третьим сторонам, результаты можно удалить по запросу.",
+          "en": "Authentication and results are stored in Firebase with encrypted transport and storage. No personal data is sold or shared with third parties; quiz data can be removed on request."
+        },
+        "data": {
+          "uk": "Дані шифруються під час передачі, можна запросити видалення збережених результатів.",
+          "ru": "Данные шифруются при передаче, можно запросить удаление сохранённых результатов.",
+          "en": "Data is encrypted in transit and you can request deletion of stored quiz results."
+        }
+      },
+      "icon": "/assets/quizary.png",
+      "fallback": "QZ",
+      "link": "https://play.google.com/store/apps/details?id=com.sbro.quizary",
+      "isNew": false,
+      "slug": "quizary",
+      "desc": {
+        "uk": "Гра-вікторина та навчання в одному додатку: живі таблиці лідерів, досягнення, сотні запитань за темами та розумний режим навчання, який дозволяє спершу вивчити матеріал, а вже потім змагатись.",
+        "ru": "Игра-викторина и обучение в одном приложении: живые таблицы лидеров, достижения, сотни вопросов по темам и умный режим обучения, который позволяет сначала разобраться в материале, а потом соревноваться.",
+        "en": "A polished quiz and learning app in one: live leaderboards, achievements, hundreds of questions across topics and a smart Study Mode so you can learn first and compete later."
+      }
+    },
+    "com.sbro.qomoti": {
+      "id": "com.sbro.qomoti",
+      "title": {
+        "uk": "Quotes+ — Щоденне Натхнення",
+        "ru": "Quotes+ — Ежедневное Вдохновение",
+        "en": "Quotes+ — Daily Inspiration"
+      },
+      "short": {
+        "uk": "Кишенькове джерело мотивації: 2800+ цитат, віджети та красиві картки.",
+        "ru": "Карманный источник мотивации: 2800+ цитат, виджеты и красивые карточки.",
+        "en": "Pocket inspiration: 2800+ quotes, widgets and beautiful shareable cards."
+      },
+      "long": {
+        "uk": "Quotes+ допомагає підтримувати настрій і мотивацію протягом дня. Цитати поділені на категорії, є обране, історія й прозорий віджет для головного екрана. Можна підібрати фон, шрифт і розмір тексту, а потім згенерувати власну картку з цитатою й поділитися нею одним дотиком. Застосунок автоматично підлаштовує мову інтерфейсу під систему, тож усе виглядає рідно.",
+        "ru": "Quotes+ помогает поддерживать настроение и мотивацию в течение дня. Цитаты разделены по категориям, есть избранное, история и прозрачный виджет для главного экрана. Можно подобрать фон, шрифт и размер текста, а затем создать собственную карточку с цитатой и поделиться ею в один тап. Приложение автоматически подстраивает язык интерфейса под систему.",
+        "en": "Quotes+ keeps you motivated and mindful throughout the day. Quotes are organised into categories with favorites and history, plus a transparent home screen widget. You can choose background, font style and size, then turn any quote into a custom card to share in one tap. The app automatically matches your system language, so it feels native from the first run."
+      },
+      "category": {
+        "uk": "Цитати · Лайфстайл",
+        "ru": "Цитаты · Лайфстайл",
+        "en": "Quotes · Lifestyle"
+      },
+      "features": {
+        "uk": [
+          "Понад 2800 цитат за категоріями: мотивація, кохання, успіх, філософія та інші.",
+          "Обране та історія, щоб швидко повертатися до важливих думок.",
+          "Прозорий віджет для головного екрана з оновлюваними цитатами.",
+          "Можливість обрати фон із галереї або використати вбудовані спокійні бекграунди.",
+          "Налаштування шрифту й розміру тексту для комфортного читання.",
+          "Створення власних карток цитат та швидкий шаринг у месенджери та соцмережі.",
+          "Автоматичне перемикання мови (кілька підтримуваних мов інтерфейсу).",
+          "Одноразова покупка для відключення реклами без підписок."
+        ],
+        "ru": [
+          "Более 2800 цитат по категориям: мотивация, любовь, успех, философия и др.",
+          "Избранное и история для быстрых возвращений к важным мыслям.",
+          "Прозрачный виджет на главный экран с обновляющимися цитатами.",
+          "Возможность выбрать фон из галереи или использовать встроенные фоны.",
+          "Настройка шрифта и размера текста для комфортного чтения.",
+          "Создание собственных карточек цитат и быстрый шаринг в мессенджеры и соцсети.",
+          "Автоматическое переключение языка интерфейса (несколько языков).",
+          "Разовый платёж для отключения рекламы без подписок."
+        ],
+        "en": [
+          "2800+ quotes across categories like motivation, love, success and philosophy.",
+          "Favorites and history so you can revisit meaningful lines anytime.",
+          "Transparent home screen widget with rotating quotes.",
+          "Use calm built-in backgrounds or pick images from your gallery.",
+          "Fine-tune font style and size for comfortable reading.",
+          "Create shareable quote cards and send them in one tap.",
+          "Automatic language switching with multiple UI languages.",
+          "One-time purchase to remove ads — no subscriptions."
+        ]
+      },
+      "info": {
+        "minAndroid": "Android 7.0+",
+        "size": "~60 MB",
+        "inApp": true,
+        "offline": true,
+        "updated": "Регулярні оновлення",
+        "privacy": {
+          "uk": "Quotes+ зберігає мінімальні технічні дані та не ділиться особистою інформацією з третіми сторонами.",
+          "ru": "Quotes+ хранит минимальные технические данные и не передаёт личную информацию третьим сторонам.",
+          "en": "Quotes+ keeps only minimal technical data and does not share personal information with third parties."
+        },
+        "data": {
+          "uk": "Дані шифруються під час передачі, аналітика анонімна.",
+          "ru": "Данные шифруются при передаче, аналитика анонимная.",
+          "en": "Data is encrypted in transit and analytics is kept anonymous."
+        }
+      },
+      "icon": "/assets/quotesplus.png",
+      "fallback": "Q+",
+      "link": "https://play.google.com/store/apps/details?id=com.sbro.qomoti",
+      "isNew": false,
+      "slug": "quotesplus",
+      "desc": {
+        "uk": "Понад 2800 цитат для мотивації та настрою: категорії, обране, історія, віджети, власні картки з фоном та шрифтами й автоматичне перемикання мови.",
+        "ru": "Более 2800 цитат для мотивации и настроения: категории, избранное, история, виджеты, собственные карточки с фоном и шрифтами и автоматическое переключение языка.",
+        "en": "2800+ uplifting quotes with categories, favorites, history, widgets, custom quote cards and automatic language switching for a clean daily inspiration flow."
+      }
+    },
+    "com.sbro.quizaryenglish": {
+      "id": "com.sbro.quizaryenglish",
+      "title": {
+        "uk": "Quizary English — Вчи Англійську Грою",
+        "ru": "Quizary English — Учим Английский Играя",
+        "en": "Quizary English — Learn English by Playing"
+      },
+      "short": {
+        "uk": "Практика англійської A1–C2 з ігровими режимами, трофеями та рівневими тестами.",
+        "ru": "Практика английского A1–C2 с игровыми режимами, трофеями и уровневым тестом.",
+        "en": "English practice from A1 to C2 with game modes, trophies and level tests."
+      },
+      "long": {
+        "uk": "Quizary English перетворює вивчення англійської на щоденну звичку. Різні режими поєднують лексику, граматику, правопис та читання в короткі сесії — від класичних тестів до складання речень і режиму “знаю / не знаю”. Є рівневий тест без таймера, тематичні тренування, історія помилок та прогрес із трофеями. Додаток підтримує кілька мов інтерфейсу, аудіо з вимовою та синхронізацію через Google-акаунт.",
+        "ru": "Quizary English превращает изучение английского в ежедневную привычку. Разные режимы соединяют лексику, грамматику, орфографию и чтение в короткие сессии — от классических тестов до составления предложений и режима «знаю / не знаю». Есть уровневый тест без таймера, тематические тренировки, история ошибок и прогресс с трофеями. Приложение поддерживает несколько языков интерфейса, озвучку слов и синхронизацию через Google-аккаунт.",
+        "en": "Quizary English turns English learning into a daily habit. Multiple modes combine vocabulary, grammar, spelling and reading into short sessions — from classic quizzes to sentence building and know/don’t know flows. There is a calm level test, topic-focused practice, history with mistake review and a progression system with XP and trophies. The app supports several UI languages, audio pronunciation and Google-based cloud sync."
+      },
+      "category": {
+        "uk": "Мова · Освіта",
+        "ru": "Язык · Обучение",
+        "en": "Language · Education"
+      },
+      "features": {
+        "uk": [
+          "Повний діапазон рівнів CEFR: A1, A2, B1, B2, C1, C2 та змішаний режим.",
+          "Різні типи завдань: вибір відповіді, “знаю / не знаю”, складання речення, пошук зайвого слова тощо.",
+          "Словник з кількома тисячами слів, підказками, частинами мови та пошуком.",
+          "Контекстні картки з прикладами використання фраз у живих ситуаціях.",
+          "Режими: Level Test, Topic Practice, Random Training, Hardcore з обмеженням спроб.",
+          "Щоденна ціль, серії, XP, трофеї та глобальні таблиці лідерів.",
+          "Перегляд історії відповідей і повторення помилкових завдань.",
+          "Теми, мови інтерфейсу та швидкість аудіо, які можна налаштувати під себе."
+        ],
+        "ru": [
+          "Полный диапазон уровней CEFR: A1, A2, B1, B2, C1, C2 и смешанный режим.",
+          "Разные форматы заданий: выбор ответа, «знаю / не знаю», составление предложения, поиск лишнего слова и др.",
+          "Словарь с тысячами слов, подсказками, частями речи и поиском.",
+          "Контекстные карточки с примерами использования фраз в живых ситуациях.",
+          "Режимы: Level Test, Topic Practice, Random Training, Hardcore с ограничением попыток.",
+          "Ежедневная цель, серии, XP, трофеи и глобальные таблицы лидеров.",
+          "Просмотр истории ответов и повторение ошибочных задач.",
+          "Настраиваемые темы, языки интерфейса и скорость аудио-озвучки."
+        ],
+        "en": [
+          "Full CEFR range: A1, A2, B1, B2, C1, C2 plus a mixed mode.",
+          "Varied exercises: multiple-choice, know / don’t know, sentence builder, odd-one-out and more.",
+          "Built-in vocabulary with thousands of words, hints, parts of speech and quick search.",
+          "Context cards with real-life examples and useful phrases.",
+          "Modes like Level Test, Topic Practice, Random Training and Hardcore with limited lives.",
+          "Daily goal, streaks, XP, trophies and global leaderboards.",
+          "Answer history and mistake review to fix weak spots.",
+          "Customizable themes, UI languages and audio playback speed for pronunciation practice."
+        ]
+      },
+      "info": {
+        "minAndroid": "Android 7.0+",
+        "size": "~50 MB",
+        "inApp": true,
+        "offline": true,
+        "updated": "Нове",
+        "privacy": {
+          "uk": "Дані акаунта та прогрес зберігаються через Google Sign-In з шифруванням. Особисту інформацію не продають і не передають третім сторонам.",
+          "ru": "Данные аккаунта и прогресс сохраняются через Google Sign-In с шифрованием. Личная информация не продаётся и не передаётся третьим сторонам.",
+          "en": "Account data and progress are stored via Google Sign-In with encryption. Personal information is not sold or shared with third parties."
+        },
+        "data": {
+          "uk": "Дані шифруються під час передачі; можна запросити видалення результатів і прогресу.",
+          "ru": "Данные шифруются при передаче; можно запросить удаление результатов и прогресса.",
+          "en": "Data is encrypted in transit and you can request deletion of stored results and progress."
+        }
+      },
+      "icon": "/assets/quizaryenglish.png",
+      "fallback": "QE",
+      "link": "https://play.google.com/store/apps/details?id=com.sbro.quizaryenglish",
+      "isNew": true,
+      "slug": "quizaryenglish",
+      "desc": {
+        "uk": "Прокачуй англійську з рівнів A1–C2 у форматі коротких ігор: тести, “знаю/не знаю”, складання речень, перемішані слова, рівневі тести, трофеї та таблиці лідерів.",
+        "ru": "Прокачивай английский с уровней A1–C2 в формате коротких игр: тесты, «знаю/не знаю», составление предложений, перемешанные слова, уровневые тесты, трофеи и таблицы лидеров.",
+        "en": "Level up your English from A1 to C2 with short game-like sessions: quizzes, know/don’t know, sentence builder, word unscramble, level tests, trophies and leaderboards."
+      }
+    },
+    "com.sbro.qray": {
+      "id": "com.sbro.qray",
+      "title": {
+        "uk": "Qray — Сканер та Генератор QR",
+        "ru": "Qray — Сканер и Генератор QR",
+        "en": "Qray — QR Scanner & Generator"
+      },
+      "short": {
+        "uk": "Легкий інструмент для сканування, збереження та створення QR-кодів.",
+        "ru": "Лёгкий инструмент для сканирования, сохранения и создания QR-кодов.",
+        "en": "A lightweight tool for scanning, saving and creating QR codes."
+      },
+      "long": {
+        "uk": "Qray — це універсальний помічник для роботи з QR-кодами. Він миттєво зчитує коди, зберігає історію та дозволяє додавати важливі елементи в обране. Можна створити власні QR-коди з тексту, посилань або Wi-Fi-мережі й вибрати якість від невеликого превʼю до великої картинки для друку. Інтерфейс простий, без зайвих кроків, а темна/світла тема підлаштовується під систему.",
+        "ru": "Qray — универсальный помощник для работы с QR-кодами. Он мгновенно считывает коды, сохраняет историю и позволяет добавлять важные элементы в избранное. Можно создавать свои QR-коды из текста, ссылок или Wi-Fi-сети и выбирать качество от небольшого превью до большой картинки для печати. Интерфейс простой, без лишних шагов, а тёмная/светлая тема следует за системой.",
+        "en": "Qray is your all-in-one helper for QR codes. It instantly scans codes, keeps a readable history and lets you bookmark important ones. You can generate your own QR codes from text, links or Wi-Fi networks and choose output size from small preview to high-resolution for printing. The interface stays minimal and fast, with light/dark themes following your system."
+      },
+      "category": {
+        "uk": "Інструменти · QR",
+        "ru": "Инструменты · QR",
+        "en": "Tools · QR"
+      },
+      "features": {
+        "uk": [
+          "Миттєве сканування QR-кодів і штрих-кодів.",
+          "Історія сканувань з можливістю швидко відкрити код повторно.",
+          "Обране для важливих кодів (Wi-Fi, візитки, посилання).",
+          "Генерація власних QR-кодів з тексту, URL або Wi-Fi-налаштувань.",
+          "Вибір розміру зображення (наприклад, від 512 до 2048 px) для різних сценаріїв.",
+          "Підтримка світлої та темної теми з автоматичним перемиканням.",
+          "Легкий та швидкий застосунок без зайвих дозволів.",
+          "Регулярні оновлення та можливість підтримати розробника."
+        ],
+        "ru": [
+          "Мгновенное сканирование QR- и штрих-кодов.",
+          "История сканирований с быстрым повторным доступом.",
+          "Избранное для важных кодов (Wi-Fi, визитки, ссылки).",
+          "Генерация собственных QR-кодов из текста, URL или настроек Wi-Fi.",
+          "Выбор размера изображения (например, от 512 до 2048 px) под разные задачи.",
+          "Поддержка светлой и тёмной темы с авто-переключением.",
+          "Лёгкое и быстрое приложение без лишних разрешений.",
+          "Регулярные обновления и возможность поддержать разработчика."
+        ],
+        "en": [
+          "Instant scanning for QR and barcodes.",
+          "History of scans so you never lose an important code.",
+          "Favorites section for frequently used codes (Wi-Fi, business cards, links).",
+          "QR generator for text, URLs and Wi-Fi credentials.",
+          "Configurable output size (for example 512–2048 px) suitable for screens or print.",
+          "Light and dark themes that follow your system setting.",
+          "Lightweight app with only essential permissions.",
+          "Regular updates and an option to support the developer."
+        ]
+      },
+      "info": {
+        "minAndroid": "Android 7.0+",
+        "size": "~25 MB",
+        "inApp": true,
+        "offline": true,
+        "updated": "Перша стабільна версія",
+        "privacy": {
+          "uk": "Усі скани та створені коди залишаються на пристрої; особисті дані не передаються стороннім сервісам.",
+          "ru": "Все сканы и созданные коды остаются на устройстве; личные данные не передаются сторонним сервисам.",
+          "en": "All scans and generated codes stay on your device; no personal data is shared with external services."
+        },
+        "data": {
+          "uk": "Застосунок не збирає персональні дані; аналітика мінімальна.",
+          "ru": "Приложение не собирает персональные данные; аналитика минимальна.",
+          "en": "The app does not collect personal data; analytics is kept minimal."
+        }
+      },
+      "icon": "/assets/qray.png",
+      "fallback": "QR",
+      "link": "https://play.google.com/store/apps/details?id=com.sbro.qray",
+      "isNew": true,
+      "slug": "qray",
+      "desc": {
+        "uk": "Швидкий сканер та генератор QR-кодів: миттєве сканування, історія, обране, створення власних кодів з тексту, посилань і Wi-Fi, вибір розміру зображення та підтримка світлої/темної теми.",
+        "ru": "Быстрый сканер и генератор QR-кодов: мгновенное сканирование, история, избранное, создание собственных кодов из текста, ссылок и Wi-Fi, выбор размера изображения и поддержка светлой/тёмной темы.",
+        "en": "Lightweight QR scanner & generator: instant scans, history, favorites, custom codes from text/links/Wi-Fi, adjustable output size and full light/dark theme support."
+      }
+    }
+  }
+}
