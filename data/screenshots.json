@@ -122,27 +122,27 @@
     ]
   },
 
-  "litechat": {
+ "litechat": {
   "uk": [
-    "screens/litechat/uk/1.webp",
-    "screens/litechat/uk/2.webp",
-    "screens/litechat/uk/3.webp",
-    "screens/litechat/uk/4.webp",
-    "screens/litechat/uk/5.webp"
+    "/assets/screens/litechat/uk/1.webp",
+    "/assets/screens/litechat/uk/2.webp",
+    "/assets/screens/litechat/uk/3.webp",
+    "/assets/screens/litechat/uk/4.webp",
+    "/assets/screens/litechat/uk/5.webp"
   ],
   "ru": [
-    "screens/litechat/ru/1.webp",
-    "screens/litechat/ru/2.webp",
-    "screens/litechat/ru/3.webp",
-    "screens/litechat/ru/4.webp",
-    "screens/litechat/ru/5.webp"
+    "/assets/screens/litechat/ru/1.webp",
+    "/assets/screens/litechat/ru/2.webp",
+    "/assets/screens/litechat/ru/3.webp",
+    "/assets/screens/litechat/ru/4.webp",
+    "/assets/screens/litechat/ru/5.webp"
   ],
   "en": [
-    "screens/litechat/en/1.webp",
-    "screens/litechat/en/2.webp",
-    "screens/litechat/en/3.webp",
-    "screens/litechat/en/4.webp",
-    "screens/litechat/en/5.webp"
+    "/assets/screens/litechat/en/1.webp",
+    "/assets/screens/litechat/en/2.webp",
+    "/assets/screens/litechat/en/3.webp",
+    "/assets/screens/litechat/en/4.webp",
+    "/assets/screens/litechat/en/5.webp"
   ]
 }
   
