@@ -333,7 +333,7 @@
         "ru": "Быстрый сканер и генератор QR-кодов: мгновенное сканирование, история, избранное, создание собственных кодов из текста, ссылок и Wi-Fi, выбор размера изображения и поддержка светлой/тёмной темы.",
         "en": "Lightweight QR scanner & generator: instant scans, history, favorites, custom codes from text/links/Wi-Fi, adjustable output size and full light/dark theme support."
       }
-    },
+    }
 
 
 
@@ -419,11 +419,5 @@
     }
   }
 }
-
-
-
-
-
-    
-  }
+}
 }
