@@ -3,7 +3,8 @@
     "com.sbro.quizary",
     "com.sbro.qomoti",
     "com.sbro.quizaryenglish",
-    "com.sbro.qray"
+    "com.sbro.qray",
+    "litechat"
   ],
   "byId": {
     "com.sbro.quizary": {
@@ -333,91 +334,81 @@
         "ru": "Быстрый сканер и генератор QR-кодов: мгновенное сканирование, история, избранное, создание собственных кодов из текста, ссылок и Wi-Fi, выбор размера изображения и поддержка светлой/тёмной темы.",
         "en": "Lightweight QR scanner & generator: instant scans, history, favorites, custom codes from text/links/Wi-Fi, adjustable output size and full light/dark theme support."
       }
-    }
-
-
-
-    "litechat": {
-  "id": "litechat",
-  "fallback": "LC",
-  "icon": "/assets/litechat.png",
-  "link": "https://play.google.com/store/apps/details?id=com.sbro.litechat",
-  "isNew": true,
-
-  "title": {
-    "uk": "LiteChat — офлайн AI-чат",
-    "ru": "LiteChat — офлайн AI-чат",
-    "en": "LiteChat — Offline AI Chat"
-  },
-
-  "category": {
-    "uk": "Продуктивність / AI",
-    "ru": "Продуктивность / AI",
-    "en": "Productivity / AI"
-  },
-
-  "desc": {
-    "uk": "Приватний офлайн-чат з локальними моделями: все працює на пристрої, без відправки даних у хмару.",
-    "ru": "Приватный офлайн-чат с локальными моделями: всё работает на устройстве, без отправки данных в облако.",
-    "en": "Private offline chat with local models: runs on-device with no cloud data upload."
-  },
-
-  "short": {
-    "uk": "Швидкий приватний чат з локальними моделями. Працює повністю на пристрої.",
-    "ru": "Быстрый приватный чат с локальными моделями. Работает полностью на устройстве.",
-    "en": "Fast, private chat with local models. Runs fully on-device."
-  },
-
-  "long": {
-    "uk": "LiteChat — це приватний офлайн AI-чат, який запускає локальні мовні моделі прямо на вашому телефоні. Генерація відповідей відбувається на пристрої — без відправки повідомлень у хмару.\n\nУ додатку є історія чатів, голосовий ввід, озвучування відповідей (TTS), а також менеджер моделей для зручного керування локальними LLM.",
-    "ru": "LiteChat — это приватный офлайн AI-чат, который запускает локальные языковые модели прямо на вашем телефоне. Генерация ответов происходит на устройстве — без отправки сообщений в облако.\n\nВ приложении есть история чатов, голосовой ввод, озвучивание ответов (TTS), а также менеджер моделей для удобного управления локальными LLM.",
-    "en": "LiteChat is a private offline AI chat that runs local language models directly on your phone. Replies are generated on-device — without sending your messages to the cloud.\n\nIt includes chat history, voice input, text-to-speech (TTS), and a model manager to control your local LLMs."
-  },
-
-  "features": {
-    "uk": [
-      "Офлайн-LLM: відповіді генеруються на пристрої",
-      "Приватність: без відправки даних у хмару",
-      "Історія чатів",
-      "Голосовий ввід",
-      "Озвучування (TTS)",
-      "Менеджер моделей"
-    ],
-    "ru": [
-      "Офлайн-LLM: ответы генерируются на устройстве",
-      "Приватность: без отправки данных в облако",
-      "История чатов",
-      "Голосовой ввод",
-      "Озвучивание (TTS)",
-      "Менеджер моделей"
-    ],
-    "en": [
-      "Offline LLM: on-device generation",
-      "Privacy-first: no cloud upload",
-      "Chat history",
-      "Voice input",
-      "Text-to-speech (TTS)",
-      "Model manager"
-    ]
-  },
-
-  "info": {
-    "minAndroid": "Android 12+",
-    "size": "~15 MB",
-    "inApp": false,
-    "offline": true,
-    "updated": "Перша стабільна версія",
-    "privacy": {
-      "uk": "Дані не відправляються в хмару під час генерації відповідей (офлайн робота).",
-      "ru": "Данные не отправляются в облако при генерации ответов (офлайн работа).",
-      "en": "Messages are not sent to the cloud during generation (offline mode)."
     },
-    "data": {
-      "uk": "Перевір деталі в розділі «Безпека даних» у Google Play.",
-      "ru": "Проверь детали в разделе «Безопасность данных» в Google Play.",
-      "en": "See Google Play “Data safety” for details."
+    "litechat": {
+      "id": "litechat",
+      "fallback": "LC",
+      "icon": "/assets/litechat.png",
+      "link": "https://play.google.com/store/apps/details?id=com.sbro.litechat",
+      "isNew": true,
+      "title": {
+        "uk": "LiteChat — офлайн AI-чат",
+        "ru": "LiteChat — офлайн AI-чат",
+        "en": "LiteChat — Offline AI Chat"
+      },
+      "category": {
+        "uk": "Продуктивність / AI",
+        "ru": "Продуктивность / AI",
+        "en": "Productivity / AI"
+      },
+      "desc": {
+        "uk": "Приватний офлайн-чат з локальними моделями: все працює на пристрої, без відправки даних у хмару.",
+        "ru": "Приватный офлайн-чат с локальными моделями: всё работает на устройстве, без отправки данных в облако.",
+        "en": "Private offline chat with local models: runs on-device with no cloud data upload."
+      },
+      "short": {
+        "uk": "Швидкий приватний чат з локальними моделями. Працює повністю на пристрої.",
+        "ru": "Быстрый приватный чат с локальными моделями. Работает полностью на устройстве.",
+        "en": "Fast, private chat with local models. Runs fully on-device."
+      },
+      "long": {
+        "uk": "LiteChat — це приватний офлайн AI-чат, який запускає локальні мовні моделі прямо на вашому телефоні. Генерація відповідей відбувається на пристрої — без відправки повідомлень у хмару.\n\nУ додатку є історія чатів, голосовий ввід, озвучування відповідей (TTS), а також менеджер моделей для зручного керування локальними LLM.",
+        "ru": "LiteChat — это приватный офлайн AI-чат, который запускает локальные языковые модели прямо на вашем телефоне. Генерация ответов происходит на устройстве — без отправки сообщений в облако.\n\nВ приложении есть история чатов, голосовой ввод, озвучивание ответов (TTS), а также менеджер моделей для удобного управления локальными LLM.",
+        "en": "LiteChat is a private offline AI chat that runs local language models directly on your phone. Replies are generated on-device — without sending your messages to the cloud.\n\nIt includes chat history, voice input, text-to-speech (TTS), and a model manager to control your local LLMs."
+      },
+      "features": {
+        "uk": [
+          "Офлайн-LLM: відповіді генеруються на пристрої",
+          "Приватність: без відправки даних у хмару",
+          "Історія чатів",
+          "Голосовий ввід",
+          "Озвучування (TTS)",
+          "Менеджер моделей"
+        ],
+        "ru": [
+          "Офлайн-LLM: ответы генерируются на устройстве",
+          "Приватность: без отправки данных в облако",
+          "История чатов",
+          "Голосовой ввод",
+          "Озвучивание (TTS)",
+          "Менеджер моделей"
+        ],
+        "en": [
+          "Offline LLM: on-device generation",
+          "Privacy-first: no cloud upload",
+          "Chat history",
+          "Voice input",
+          "Text-to-speech (TTS)",
+          "Model manager"
+        ]
+      },
+      "info": {
+        "minAndroid": "Android 12+",
+        "size": "~15 MB",
+        "inApp": false,
+        "offline": true,
+        "updated": "Перша стабільна версія",
+        "privacy": {
+          "uk": "Дані не відправляються в хмару під час генерації відповідей (офлайн робота).",
+          "ru": "Данные не отправляются в облако при генерации ответов (офлайн работа).",
+          "en": "Messages are not sent to the cloud during generation (offline mode)."
+        },
+        "data": {
+          "uk": "Перевір деталі в розділі «Безпека даних» у Google Play.",
+          "ru": "Проверь детали в разделе «Безопасность данных» в Google Play.",
+          "en": "See Google Play “Data safety” for details."
+        }
+      }
     }
   }
-}
-}
 }
