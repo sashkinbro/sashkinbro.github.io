@@ -88,13 +88,9 @@ body{
 }
 
 .reveal{
-  opacity:0;
-  transform:translateY(16px);
-  transition:opacity .6s ease, transform .6s ease;
-}
-.reveal.is-visible{
   opacity:1;
   transform:none;
+  transition:none;
 }
 
 @media (prefers-reduced-motion: reduce){

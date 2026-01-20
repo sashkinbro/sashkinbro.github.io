@@ -105,13 +105,10 @@ document.addEventListener('DOMContentLoaded', async ()=>{
         });
       });
 
-      card.classList.add('reveal');
       grid.appendChild(card);
     });
-    initScrollReveal();
   }
 
   document.getElementById('y').textContent = new Date().getFullYear();
   bindLangSwitcher(i18n, render);
-  initScrollReveal();
 });
