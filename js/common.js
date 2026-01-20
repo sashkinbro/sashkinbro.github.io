@@ -135,26 +135,5 @@ function initScrollReveal(){
   const items = document.querySelectorAll('.reveal:not(.reveal-ready)');
   if(!items.length) return;
 
-  if(!('IntersectionObserver' in window)){
-    items.forEach((el)=>el.classList.add('is-visible'));
-    return;
-  }
-
-  let observer = window.__revealObserver;
-  if(!observer){
-    observer = new IntersectionObserver((entries)=>{
-      entries.forEach((entry)=>{
-        if(entry.isIntersecting){
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.15 });
-    window.__revealObserver = observer;
-  }
-
-  items.forEach((el)=>{
-    el.classList.add('reveal-ready');
-    observer.observe(el);
-  });
+  items.forEach((el)=>el.classList.add('is-visible'));
 }
