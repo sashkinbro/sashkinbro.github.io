@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', async ()=>{
       btn.type = 'button';
       btn.className = 'shot-thumb app-shot';
       btn.setAttribute('aria-label', 'Open screenshot ' + (idx+1));
-      btn.innerHTML = `<img src="${src}" loading="lazy" decoding="async" alt="">`;
+      btn.innerHTML = `<img src="${src}" loading="eager" decoding="async" fetchpriority="low" width="220" height="464" alt="">`;
       btn.addEventListener('click', ()=>{ if(lightbox) lightbox.open(list, idx); });
       gallery.appendChild(btn);
     });

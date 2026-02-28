@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', async ()=>{
           <div class="shots-strip" aria-label="Screenshots">
             ${shots.map((src,idx)=>`
               <button class="shot-thumb" type="button" data-app="${app.id}" data-idx="${idx}" aria-label="Open screenshot ${idx+1}">
-                <img src="${src}" loading="lazy" decoding="async" alt="">
+                <img src="${src}" loading="eager" decoding="async" fetchpriority="low" width="220" height="464" alt="">
               </button>
             `).join('')}
           </div>
