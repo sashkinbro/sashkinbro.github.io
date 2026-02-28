@@ -115,6 +115,49 @@ document.addEventListener('DOMContentLoaded', async ()=>{
     });
 
     initInteractiveFeedback();
+    updateHomeSeo(lang);
+  }
+
+  function updateHomeSeo(lang){
+    const safeLang = (lang === 'ru' || lang === 'en') ? lang : 'uk';
+    const titles = {
+      uk: 'Sashkin Apps — офіційна сторінка розробника',
+      ru: 'Sashkin Apps — официальная страница разработчика',
+      en: 'Sashkin Apps — official developer page'
+    };
+    const descriptions = {
+      uk: 'Офіційний сайт Sashkin Apps: ігри та застосунки для Android. Завантажуйте з Google Play.',
+      ru: 'Официальный сайт Sashkin Apps: игры и приложения для Android. Скачивайте из Google Play.',
+      en: 'Official Sashkin Apps website: Android games and apps. Download from Google Play.'
+    };
+    const ogLocales = {
+      uk: 'uk_UA',
+      ru: 'ru_RU',
+      en: 'en_US'
+    };
+
+    const title = titles[safeLang];
+    const description = descriptions[safeLang];
+
+    document.title = title;
+
+    const descMeta = document.querySelector('meta[name="description"]');
+    if(descMeta) descMeta.setAttribute('content', description);
+
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if(ogTitle) ogTitle.setAttribute('content', title);
+
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    if(ogDescription) ogDescription.setAttribute('content', description);
+
+    const ogLocale = document.querySelector('meta[property="og:locale"]');
+    if(ogLocale) ogLocale.setAttribute('content', ogLocales[safeLang]);
+
+    const twTitle = document.querySelector('meta[name="twitter:title"]');
+    if(twTitle) twTitle.setAttribute('content', title);
+
+    const twDescription = document.querySelector('meta[name="twitter:description"]');
+    if(twDescription) twDescription.setAttribute('content', description);
   }
 
   document.getElementById('y').textContent = new Date().getFullYear();

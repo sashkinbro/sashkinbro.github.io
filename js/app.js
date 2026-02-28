@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', async ()=>{
   const ctaSecondary = document.getElementById('app-cta-secondary');
 
   const lightbox = createLightboxController();
+  const BASE_URL = 'https://sashkinbro.github.io';
 
   function setupTabs(){
     const tabButtons = document.querySelectorAll('.tab-btn');
@@ -72,7 +73,8 @@ document.addEventListener('DOMContentLoaded', async ()=>{
     }
 
     const title = app.title?.[lang] || app.title?.uk || 'App';
-    document.title = `${title} — Sashkin Apps`;
+    const pageTitle = `${title} — Sashkin Apps`;
+    document.title = pageTitle;
 
     if(hero){
       hero.innerHTML = `
@@ -151,7 +153,78 @@ document.addEventListener('DOMContentLoaded', async ()=>{
       `;
     }
 
+    updateSeo(app, lang, pageTitle);
     initInteractiveFeedback();
+  }
+
+  function updateSeo(app, lang, pageTitle){
+    const safeLang = (lang === 'ru' || lang === 'en') ? lang : 'uk';
+    const description = app.short?.[safeLang] || app.desc?.[safeLang] || app.short?.uk || '';
+    const appUrl = `${BASE_URL}/app.html?id=${encodeURIComponent(app.id)}`;
+    const imageUrl = app.icon ? `${BASE_URL}${app.icon}` : `${BASE_URL}/assets/sashkinapps2.png`;
+
+    const descMeta = document.querySelector('meta[name="description"]');
+    if(descMeta) descMeta.setAttribute('content', description);
+
+    const canonical = document.getElementById('canonical-link');
+    if(canonical) canonical.setAttribute('href', appUrl);
+
+    const ogUrl = document.getElementById('og-url');
+    if(ogUrl) ogUrl.setAttribute('content', appUrl);
+
+    const ogTitle = document.getElementById('og-title');
+    if(ogTitle) ogTitle.setAttribute('content', pageTitle);
+
+    const ogDescription = document.getElementById('og-description');
+    if(ogDescription) ogDescription.setAttribute('content', description);
+
+    const ogImage = document.getElementById('og-image');
+    if(ogImage) ogImage.setAttribute('content', imageUrl);
+
+    const ogImageAlt = document.getElementById('og-image-alt');
+    if(ogImageAlt) ogImageAlt.setAttribute('content', `${titleForLang(app, safeLang)} app icon`);
+
+    const twTitle = document.getElementById('twitter-title');
+    if(twTitle) twTitle.setAttribute('content', pageTitle);
+
+    const twDescription = document.getElementById('twitter-description');
+    if(twDescription) twDescription.setAttribute('content', description);
+
+    const twImage = document.getElementById('twitter-image');
+    if(twImage) twImage.setAttribute('content', imageUrl);
+
+    const twImageAlt = document.getElementById('twitter-image-alt');
+    if(twImageAlt) twImageAlt.setAttribute('content', `${titleForLang(app, safeLang)} app icon`);
+
+    const jsonLd = document.getElementById('app-jsonld');
+    if(jsonLd){
+      const data = {
+        '@context': 'https://schema.org',
+        '@type': 'SoftwareApplication',
+        name: titleForLang(app, safeLang),
+        operatingSystem: 'Android',
+        applicationCategory: app.category?.[safeLang] || app.category?.uk || 'Mobile Application',
+        description,
+        url: appUrl,
+        image: imageUrl,
+        inLanguage: safeLang,
+        offers: {
+          '@type': 'Offer',
+          price: '0',
+          priceCurrency: 'USD'
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'Sashkin Apps',
+          url: `${BASE_URL}/`
+        }
+      };
+      jsonLd.textContent = JSON.stringify(data);
+    }
+  }
+
+  function titleForLang(app, lang){
+    return app.title?.[lang] || app.title?.uk || app.title?.en || 'Sashkin Apps';
   }
 
   document.getElementById('y').textContent = new Date().getFullYear();
