@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#020617" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <title>Sashkin Apps — App</title>
+    <meta name="description" content="Перегляд мобільного застосунку Sashkin Apps: опис, можливості, підтримувані версії Android та скріншоти з Google Play стилем." />
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>📱</text></svg>">
+    <link rel="preload" as="image" href="/assets/sashkinapps.png" imagesrcset="/assets/sashkinapps.png 1x, /assets/sashkinapps.png 2x" imagesizes="(min-width: 900px) 56px, 44px">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <div class="container topbar glass">
+        <a class="brand" href="index.html" aria-label="На головну">
+          <img
+            class="logo"
+            src="/assets/sashkinapps.png"
+            srcset="/assets/sashkinapps.png 1x, /assets/sashkinapps.png 2x"
+            sizes="(min-width: 900px) 56px, 44px"
+            alt="Sashkin Apps logo"
+            width="56" height="56"
+            decoding="async"
+          />
+          <div>
+            <div style="font-weight:800">Sashkin Apps</div>
+            <div class="muted" data-i18n="tagline">Офіційна сторінка розробника</div>
+          </div>
+        </a>
+        <div class="controls">
+          <div class="chip" role="tablist" aria-label="Language switcher">
+            <button id="btn-uk" class="active" data-lang="uk" role="tab" aria-selected="true">UA</button>
+            <button id="btn-ru" data-lang="ru" role="tab" aria-selected="false">RU</button>
+            <button id="btn-en" data-lang="en" role="tab" aria-selected="false">EN</button>
+          </div>
+          <button id="themeToggle" class="tbtn" aria-label="Toggle theme">🌗</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero app-hero" id="app-hero">
+      </section>
+
+      <section class="panel app-gallery-panel">
+        <h2 class="tab-title" data-i18n="screensTitle">Скріншоти</h2>
+        <p class="screens-note" data-i18n="screensNote">
+          Інтерфейс додатку може відрізнятися залежно від мови та версії Android.
+        </p>
+        <div class="app-gallery" id="app-gallery"></div>
+      </section>
+
+      <section class="panel app-tabs" id="app-tabs">
+        <div class="tablist" role="tablist" aria-label="App sections">
+          <button class="tab-btn active" data-tab="overview" role="tab" aria-selected="true" data-i18n="tabOverview">
+            Огляд
+          </button>
+          <button class="tab-btn" data-tab="features" role="tab" aria-selected="false" data-i18n="tabFeatures">
+            Можливості
+          </button>
+          <button class="tab-btn" data-tab="info" role="tab" aria-selected="false" data-i18n="tabInfo">
+            Інформація
+          </button>
+        </div>
+
+        <div class="tab-panels">
+          <section id="tab-overview" class="tab-panel" role="tabpanel">
+            <h2 class="tab-title" data-i18n="tabOverview">Огляд</h2>
+            <p id="app-long"></p>
+          </section>
+
+          <section id="tab-features" class="tab-panel" role="tabpanel" hidden>
+            <h2 class="tab-title" data-i18n="tabFeatures">Можливості</h2>
+            <ul id="app-features" class="features-list"></ul>
+          </section>
+
+          <section id="tab-info" class="tab-panel" role="tabpanel" hidden>
+            <h2 class="tab-title" data-i18n="tabInfo">Інформація</h2>
+            <dl class="info-grid" id="app-info"></dl>
+          </section>
+        </div>
+      </section>
+
+      <section class="panel app-back">
+        <div id="app-cta-secondary"></div>
+      </section>
+
+      <footer>
+        <span>© <span id="y"></span> Sashkin Apps</span>
+        <span>
+          <span data-i18n="contact">Зв'язок:</span>
+          <a href="mailto:sashkinapps@gmail.com">sashkinapps@gmail.com</a>
+          ·
+          <a href="https://play.google.com/store/apps/developer?id=Sashkin+Apps" target="_blank" rel="noopener" data-i18n="devProfile">
+            Профіль розробника на Google Play
+          </a>
+        </span>
+      </footer>
+    </main>
+
+  
+    <div id="lightbox" class="lightbox" hidden>
+      <div class="lightbox-backdrop" data-lightbox-close></div>
+      <div class="lightbox-inner">
+        <button class="lightbox-close" type="button" aria-label="Close" data-lightbox-close>✕</button>
+        <button class="lightbox-nav lightbox-prev" type="button" aria-label="Previous" data-lightbox-prev>‹</button>
+        <button class="lightbox-nav lightbox-next" type="button" aria-label="Next" data-lightbox-next>›</button>
+        <img id="lightbox-img" alt="" loading="lazy" />
+      </div>
+    </div>
+
+        <script src="js/common.js"></script>
+    <script src="js/app.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,224 @@
+{
+  "com.sbro.gameslibraryall": {
+    "uk": [
+      "/assets/screens/gameslibraryx/uk/1.png",
+      "/assets/screens/gameslibraryx/uk/2.png",
+      "/assets/screens/gameslibraryx/uk/3.png",
+      "/assets/screens/gameslibraryx/uk/4.png",
+      "/assets/screens/gameslibraryx/uk/5.png",
+      "/assets/screens/gameslibraryx/uk/6.png",
+      "/assets/screens/gameslibraryx/uk/7.png"
+    ],
+    "ru": [
+      "/assets/screens/gameslibraryx/ru/1.png",
+      "/assets/screens/gameslibraryx/ru/2.png",
+      "/assets/screens/gameslibraryx/ru/3.png",
+      "/assets/screens/gameslibraryx/ru/4.png",
+      "/assets/screens/gameslibraryx/ru/5.png",
+      "/assets/screens/gameslibraryx/ru/6.png",
+      "/assets/screens/gameslibraryx/ru/7.png"
+    ],
+    "en": [
+      "/assets/screens/gameslibraryx/en/1.png",
+      "/assets/screens/gameslibraryx/en/2.png",
+      "/assets/screens/gameslibraryx/en/3.png",
+      "/assets/screens/gameslibraryx/en/4.png",
+      "/assets/screens/gameslibraryx/en/5.png",
+      "/assets/screens/gameslibraryx/en/6.png",
+      "/assets/screens/gameslibraryx/en/7.png"
+    ]
+  },
+  "com.sbro.quizary": {
+    "uk": [
+      "/assets/screens/quizary/uk/1.webp",
+      "/assets/screens/quizary/uk/2.webp",
+      "/assets/screens/quizary/uk/3.webp",
+      "/assets/screens/quizary/uk/4.webp",
+      "/assets/screens/quizary/uk/5.webp",
+      "/assets/screens/quizary/uk/6.webp",
+      "/assets/screens/quizary/uk/7.webp",
+      "/assets/screens/quizary/uk/8.webp"
+    ],
+    "ru": [
+      "/assets/screens/quizary/ru/1.webp",
+      "/assets/screens/quizary/ru/2.webp",
+      "/assets/screens/quizary/ru/3.webp",
+      "/assets/screens/quizary/ru/4.webp",
+      "/assets/screens/quizary/ru/5.webp",
+      "/assets/screens/quizary/ru/6.webp",
+      "/assets/screens/quizary/ru/7.webp",
+      "/assets/screens/quizary/ru/8.webp"
+    ],
+    "en": [
+      "/assets/screens/quizary/en/1.webp",
+      "/assets/screens/quizary/en/2.webp",
+      "/assets/screens/quizary/en/3.webp",
+      "/assets/screens/quizary/en/4.webp",
+      "/assets/screens/quizary/en/5.webp",
+      "/assets/screens/quizary/en/6.webp",
+      "/assets/screens/quizary/en/7.webp",
+      "/assets/screens/quizary/en/8.webp"
+    ]
+  },
+  "com.sbro.qomoti": {
+    "uk": [
+      "/assets/screens/quotesplus/uk/1.webp",
+      "/assets/screens/quotesplus/uk/2.webp",
+      "/assets/screens/quotesplus/uk/3.webp",
+      "/assets/screens/quotesplus/uk/4.webp",
+      "/assets/screens/quotesplus/uk/5.webp",
+      "/assets/screens/quotesplus/uk/6.webp",
+      "/assets/screens/quotesplus/uk/7.webp",
+      "/assets/screens/quotesplus/uk/8.webp"
+    ],
+    "ru": [
+      "/assets/screens/quotesplus/ru/1.webp",
+      "/assets/screens/quotesplus/ru/2.webp",
+      "/assets/screens/quotesplus/ru/3.webp",
+      "/assets/screens/quotesplus/ru/4.webp",
+      "/assets/screens/quotesplus/ru/5.webp",
+      "/assets/screens/quotesplus/ru/6.webp",
+      "/assets/screens/quotesplus/ru/7.webp",
+      "/assets/screens/quotesplus/ru/8.webp"
+    ],
+    "en": [
+      "/assets/screens/quotesplus/en/1.webp",
+      "/assets/screens/quotesplus/en/2.webp",
+      "/assets/screens/quotesplus/en/3.webp",
+      "/assets/screens/quotesplus/en/4.webp",
+      "/assets/screens/quotesplus/en/5.webp",
+      "/assets/screens/quotesplus/en/6.webp",
+      "/assets/screens/quotesplus/en/7.webp",
+      "/assets/screens/quotesplus/en/8.webp"
+    ]
+  },
+  "com.sbro.quizaryenglish": {
+    "uk": [
+      "/assets/screens/quizaryenglish/uk/1.webp",
+      "/assets/screens/quizaryenglish/uk/2.webp",
+      "/assets/screens/quizaryenglish/uk/3.webp",
+      "/assets/screens/quizaryenglish/uk/4.webp",
+      "/assets/screens/quizaryenglish/uk/5.webp",
+      "/assets/screens/quizaryenglish/uk/6.webp",
+      "/assets/screens/quizaryenglish/uk/7.webp",
+      "/assets/screens/quizaryenglish/uk/8.webp"
+    ],
+    "ru": [
+      "/assets/screens/quizaryenglish/ru/1.webp",
+      "/assets/screens/quizaryenglish/ru/2.webp",
+      "/assets/screens/quizaryenglish/ru/3.webp",
+      "/assets/screens/quizaryenglish/ru/4.webp",
+      "/assets/screens/quizaryenglish/ru/5.webp",
+      "/assets/screens/quizaryenglish/ru/6.webp",
+      "/assets/screens/quizaryenglish/ru/7.webp",
+      "/assets/screens/quizaryenglish/ru/8.webp"
+    ],
+    "en": [
+      "/assets/screens/quizaryenglish/en/1.webp",
+      "/assets/screens/quizaryenglish/en/2.webp",
+      "/assets/screens/quizaryenglish/en/3.webp",
+      "/assets/screens/quizaryenglish/en/4.webp",
+      "/assets/screens/quizaryenglish/en/5.webp",
+      "/assets/screens/quizaryenglish/en/6.webp",
+      "/assets/screens/quizaryenglish/en/7.webp",
+      "/assets/screens/quizaryenglish/en/8.webp"
+    ]
+  },
+  "com.sbro.qray": {
+    "uk": [
+      "/assets/screens/qray/uk/1.webp",
+      "/assets/screens/qray/uk/2.webp",
+      "/assets/screens/qray/uk/3.webp",
+      "/assets/screens/qray/uk/4.webp",
+      "/assets/screens/qray/uk/5.webp",
+      "/assets/screens/qray/uk/6.webp"
+    ],
+    "ru": [
+      "/assets/screens/qray/ru/1.webp",
+      "/assets/screens/qray/ru/2.webp",
+      "/assets/screens/qray/ru/3.webp",
+      "/assets/screens/qray/ru/4.webp",
+      "/assets/screens/qray/ru/5.webp",
+      "/assets/screens/qray/ru/6.webp"
+    ],
+    "en": [
+      "/assets/screens/qray/en/1.webp",
+      "/assets/screens/qray/en/2.webp",
+      "/assets/screens/qray/en/3.webp",
+      "/assets/screens/qray/en/4.webp",
+      "/assets/screens/qray/en/5.webp",
+      "/assets/screens/qray/en/6.webp"
+    ]
+  },
+  "com.sbro.kcguide": {
+    "uk": [
+      "/assets/screens/kotlin/uk/1.webp",
+      "/assets/screens/kotlin/uk/2.webp",
+      "/assets/screens/kotlin/uk/3.webp",
+      "/assets/screens/kotlin/uk/4.webp",
+      "/assets/screens/kotlin/uk/5.webp"
+    ],
+    "ru": [
+      "/assets/screens/kotlin/ru/1.webp",
+      "/assets/screens/kotlin/ru/2.webp",
+      "/assets/screens/kotlin/ru/3.webp",
+      "/assets/screens/kotlin/ru/4.webp",
+      "/assets/screens/kotlin/ru/5.webp"
+    ],
+    "en": [
+      "/assets/screens/kotlin/en/1.webp",
+      "/assets/screens/kotlin/en/2.webp",
+      "/assets/screens/kotlin/en/3.webp",
+      "/assets/screens/kotlin/en/4.webp",
+      "/assets/screens/kotlin/en/5.webp"
+    ]
+  },
+  "com.sbro.gameslibrary": {
+    "uk": [
+      "/assets/screens/gameslibrary/uk/1.png",
+      "/assets/screens/gameslibrary/uk/2.png",
+      "/assets/screens/gameslibrary/uk/3.png",
+      "/assets/screens/gameslibrary/uk/4.png",
+      "/assets/screens/gameslibrary/uk/5.png"
+    ],
+    "ru": [
+      "/assets/screens/gameslibrary/ru/1.png",
+      "/assets/screens/gameslibrary/ru/2.png",
+      "/assets/screens/gameslibrary/ru/3.png",
+      "/assets/screens/gameslibrary/ru/4.png",
+      "/assets/screens/gameslibrary/ru/5.png"
+    ],
+    "en": [
+      "/assets/screens/gameslibrary/en/1.png",
+      "/assets/screens/gameslibrary/en/2.png",
+      "/assets/screens/gameslibrary/en/3.png",
+      "/assets/screens/gameslibrary/en/4.png",
+      "/assets/screens/gameslibrary/en/5.png"
+    ]
+  },
+
+ "litechat": {
+  "uk": [
+    "/assets/screens/litechat/uk/1.webp",
+    "/assets/screens/litechat/uk/2.webp",
+    "/assets/screens/litechat/uk/3.webp",
+    "/assets/screens/litechat/uk/4.webp",
+    "/assets/screens/litechat/uk/5.webp"
+  ],
+  "ru": [
+    "/assets/screens/litechat/ru/1.webp",
+    "/assets/screens/litechat/ru/2.webp",
+    "/assets/screens/litechat/ru/3.webp",
+    "/assets/screens/litechat/ru/4.webp",
+    "/assets/screens/litechat/ru/5.webp"
+  ],
+  "en": [
+    "/assets/screens/litechat/en/1.webp",
+    "/assets/screens/litechat/en/2.webp",
+    "/assets/screens/litechat/en/3.webp",
+    "/assets/screens/litechat/en/4.webp",
+    "/assets/screens/litechat/en/5.webp"
+  ]
+}
+  
+}
